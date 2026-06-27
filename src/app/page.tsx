@@ -1,11 +1,14 @@
 import Link from "next/link";
-import { Terminal, Cpu, ArrowRight, Activity, Zap, Server, ChevronRight } from "lucide-react";
+import { Terminal, Cpu, ArrowRight, Activity, Zap, Server, ChevronRight, Layers } from "lucide-react";
+import { getAllProjects } from "@/lib/projects/registry";
 
 export default function Home() {
+  const flagshipProjects = getAllProjects();
+
   return (
-    <div className="flex flex-col gap-16 py-4">
+    <div className="flex flex-col gap-20 py-4">
       {/* Hero Section - Centered Layout */}
-      <section className="relative flex flex-col items-center text-center gap-8 py-10 md:py-20">
+      <section className="relative flex flex-col items-center text-center gap-8 py-10 md:py-16">
         {/* Ambient Radial Glows (Centered Blurs) */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[550px] w-[550px] rounded-full bg-emerald-500/10 blur-[150px] pointer-events-none" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 h-[400px] w-[400px] rounded-full bg-cyan-500/10 blur-[130px] pointer-events-none" />
@@ -49,7 +52,7 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Architecture Showcase Cards */}
+        {/* Architecture Showcase Highlights */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 w-full pt-12 text-left">
           <div className="cyber-card rounded-2xl p-6 flex flex-col justify-between gap-4 group">
             <div className="flex flex-col gap-3">
@@ -66,10 +69,13 @@ export default function Home() {
                 Intent routing, state machines, and autonomous multi-agent swarms.
               </p>
             </div>
-            <div className="flex items-center gap-1 text-[11px] font-mono text-zinc-400 group-hover:text-emerald-400 transition-colors pt-2 border-t border-zinc-800/60">
-              <span>View Architecture</span>
+            <Link
+              href="/projects/openclaw"
+              className="flex items-center gap-1 text-[11px] font-mono text-zinc-400 group-hover:text-emerald-400 transition-colors pt-2 border-t border-zinc-800/60"
+            >
+              <span>Inspect OpenClaw Case Study</span>
               <ChevronRight className="h-3.5 w-3.5" />
-            </div>
+            </Link>
           </div>
 
           <div className="cyber-card rounded-2xl p-6 flex flex-col justify-between gap-4 group">
@@ -87,10 +93,13 @@ export default function Home() {
                 Model Context Protocol servers providing modular tools & live context.
               </p>
             </div>
-            <div className="flex items-center gap-1 text-[11px] font-mono text-zinc-400 group-hover:text-cyan-400 transition-colors pt-2 border-t border-zinc-800/60">
-              <span>Inspect Protocol</span>
+            <Link
+              href="/projects/qrox"
+              className="flex items-center gap-1 text-[11px] font-mono text-zinc-400 group-hover:text-cyan-400 transition-colors pt-2 border-t border-zinc-800/60"
+            >
+              <span>Inspect Qrox Gateway</span>
               <ChevronRight className="h-3.5 w-3.5" />
-            </div>
+            </Link>
           </div>
 
           <div className="cyber-card rounded-2xl p-6 flex flex-col justify-between gap-4 group">
@@ -108,11 +117,96 @@ export default function Home() {
                 Optimized LLM stream latency & high-throughput parallel execution.
               </p>
             </div>
-            <div className="flex items-center gap-1 text-[11px] font-mono text-zinc-400 group-hover:text-emerald-400 transition-colors pt-2 border-t border-zinc-800/60">
-              <span>System Telemetry</span>
+            <Link
+              href="/projects/omnipilot-cx"
+              className="flex items-center gap-1 text-[11px] font-mono text-zinc-400 group-hover:text-emerald-400 transition-colors pt-2 border-t border-zinc-800/60"
+            >
+              <span>Inspect OmniPilot-CX</span>
               <ChevronRight className="h-3.5 w-3.5" />
-            </div>
+            </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Flagship Case Studies Section */}
+      <section id="case-studies" className="flex flex-col gap-8 scroll-mt-20">
+        <div className="flex flex-col gap-3">
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-wider font-semibold">
+            <Layers className="h-4 w-4" />
+            <span>ARCHITECTURE-FIRST SHOWCASE</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold font-mono text-white tracking-tight">
+            Flagship Case Studies
+          </h2>
+          <p className="text-base text-zinc-400 max-w-2xl">
+            Deep-dive technical breakdowns featuring interactive architecture diagrams, quantitative metric counters, and proprietary design patterns.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {flagshipProjects.map((project) => (
+            <Link
+              key={project.id}
+              href={`/projects/${project.slug}`}
+              className="cyber-card rounded-2xl p-6 md:p-8 flex flex-col justify-between gap-6 group hover:border-emerald-500/50 transition-all duration-300 hover:shadow-[0_0_30px_-5px_rgba(16,185,129,0.2)]"
+            >
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-semibold px-2.5 py-0.5 rounded border border-emerald-500/30 bg-emerald-950/40">
+                    FLAGSHIP SYSTEM
+                  </span>
+                  <div className="flex items-center gap-1 text-xs font-mono text-zinc-400 group-hover:text-emerald-400 transition-colors">
+                    <span>View Architecture</span>
+                    <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-2xl font-bold font-mono text-white group-hover:text-emerald-300 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-xs font-mono text-emerald-400/90 font-medium">
+                    {project.tagline}
+                  </p>
+                </div>
+
+                <p className="text-sm text-zinc-300 font-sans leading-relaxed line-clamp-3">
+                  {project.overview}
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-4 pt-4 border-t border-zinc-800/60">
+                {/* Key Metric Highlights */}
+                {project.metrics && project.metrics.length > 0 && (
+                  <div className="grid grid-cols-3 gap-2">
+                    {project.metrics.map((m) => (
+                      <div key={m.label} className="flex flex-col gap-0.5 p-2 rounded-lg bg-zinc-900/60 border border-zinc-800/80">
+                        <span className="text-[10px] font-mono text-zinc-400 truncate">{m.label}</span>
+                        <span className="text-xs font-mono font-bold text-emerald-300">{m.value}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Tech Tags */}
+                <div className="flex flex-wrap items-center gap-1.5">
+                  {project.techTags.slice(0, 4).map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2.5 py-0.5 rounded text-[11px] font-mono bg-zinc-900 border border-zinc-800 text-zinc-400"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                  {project.techTags.length > 4 && (
+                    <span className="text-[11px] font-mono text-zinc-400">
+                      +{project.techTags.length - 4} more
+                    </span>
+                  )}
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
     </div>
