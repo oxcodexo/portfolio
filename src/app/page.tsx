@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Terminal, Cpu, ArrowRight, Activity, Zap, Server, ChevronRight, Layers } from "lucide-react";
 import { getAllProjects } from "@/lib/projects/registry";
+import { EnterpriseSolutionCards } from "@/components/projects/EnterpriseSolutionCards";
 
 export default function Home() {
   const flagshipProjects = getAllProjects();
@@ -208,6 +209,24 @@ export default function Home() {
             </Link>
           ))}
         </div>
+      </section>
+
+      {/* Enterprise Solutions Section */}
+      <section id="enterprise-solutions" className="flex flex-col gap-8 scroll-mt-20">
+        <div className="flex flex-col gap-3">
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">
+            <Server className="h-4 w-4" />
+            <span>ENTERPRISE ARCHITECTURE SHOWCASE</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold font-mono text-white tracking-tight">
+            Enterprise Solutions & SaaS Platforms
+          </h2>
+          <p className="text-base text-zinc-400 max-w-2xl">
+            Specialized infrastructure deployments engineered for high availability, zero-trust security, continuous benchmarking, and embedded AI workloads.
+          </p>
+        </div>
+
+        <EnterpriseSolutionCards />
       </section>
     </div>
   );
