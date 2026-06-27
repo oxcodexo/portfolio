@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Terminal, Cpu, ArrowRight, Activity, Zap, Server, ChevronRight } from "lucide-react";
+import { InteractiveAgentSandbox } from "./InteractiveAgentSandbox";
 
 export function HeroSection() {
   return (
@@ -45,6 +46,11 @@ export function HeroSection() {
           <Terminal className="h-4 w-4 text-emerald-400" />
           <span>LAUNCH DISPATCH CONSOLE</span>
         </Link>
+      </div>
+
+      {/* Interactive Agent Sandbox Hero Widget */}
+      <div className="w-full max-w-5xl pt-4">
+        <InteractiveAgentSandbox />
       </div>
 
       {/* Architecture Showcase Highlights */}

@@ -10,12 +10,13 @@ vi.mock('react', async () => {
   };
 });
 
-import { HeroSection } from '../HeroSection';
+import { InteractiveAgentSandbox } from '../InteractiveAgentSandbox';
 
-describe('HeroSection component', () => {
-  it('renders hero title, sandbox widget, and architecture showcase highlights', () => {
-    const JSX = HeroSection();
+describe('InteractiveAgentSandbox component', () => {
+  it('renders interactive sandbox structure with preset tabs and telemetry display', () => {
+    const JSX = InteractiveAgentSandbox();
     expect(JSX).toBeDefined();
-    expect(JSX.type).toBe('section');
+    expect(JSX.type).toBe('div');
+    expect(JSX.props.className).toContain('cyber-card');
   });
 });
