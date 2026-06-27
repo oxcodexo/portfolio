@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/home/HeroSection";
 import { FlagshipCaseStudiesSection } from "@/components/projects/FlagshipCaseStudiesSection";
 import { EnterpriseSolutionsSection } from "@/components/projects/EnterpriseSolutionsSection";
+import { DispatchConsole } from "@/components/dispatch/DispatchConsole";
 
 export default function Home() {
   return (
@@ -8,6 +9,8 @@ export default function Home() {
       <HeroSection />
       <FlagshipCaseStudiesSection />
       <EnterpriseSolutionsSection />
+      <DispatchConsole />
     </div>
   );
 }
+
