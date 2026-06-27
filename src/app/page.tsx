@@ -1,65 +1,120 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Terminal, Cpu, ArrowRight, Activity, Zap, Server, ChevronRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="flex flex-col gap-16 py-4">
+      {/* Hero Section */}
+      <section className="relative flex flex-col items-start gap-8 py-8 md:py-16">
+        {/* Ambient Radial Glows (Full Bleed Blurs) */}
+        <div className="absolute top-0 left-1/4 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-emerald-500/10 blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/3 right-0 h-[450px] w-[450px] rounded-full bg-cyan-500/10 blur-[130px] pointer-events-none" />
+
+        {/* Telemetry Badge */}
+        <div className="inline-flex items-center gap-2.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 px-4 py-1.5 text-xs font-mono text-emerald-300 backdrop-blur-md shadow-[0_0_15px_-3px_rgba(16,185,129,0.2)]">
+          <Activity className="h-3.5 w-3.5 animate-pulse text-emerald-400" />
+          <span className="font-semibold tracking-wide">SYSTEMS ARCHITECT &bull; AI-FIRST FOCUS</span>
+        </div>
+
+        {/* Headline & Subtitle */}
+        <div className="flex flex-col gap-5 max-w-4xl">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
+            Orchestrating Autonomous <br />
+            <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(16,185,129,0.2)]">
+              AI Agent Architectures
+            </span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-lg sm:text-xl text-zinc-300 font-normal leading-relaxed max-w-2xl">
+            Specialized engineering focused on multi-model LLM workflows, MCP microservices,
+            and production-grade SaaS platforms. Building scalable systems with deterministic precision.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+        {/* Action Buttons */}
+        <div className="flex flex-wrap items-center gap-4 pt-2 font-mono text-xs">
+          <Link
+            href="#case-studies"
+            className="group flex items-center gap-2.5 rounded-xl bg-emerald-500 px-6 py-3.5 text-zinc-950 font-bold hover:bg-emerald-400 transition-all duration-200 shadow-[0_0_25px_-5px_rgba(16,185,129,0.5)]"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <span>EXPLORE CASE STUDIES</span>
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+
+          <Link
+            href="#dispatch"
+            className="flex items-center gap-2.5 rounded-xl border border-zinc-800 bg-zinc-900/90 px-6 py-3.5 text-zinc-200 hover:border-zinc-700 hover:text-white hover:bg-zinc-800/80 transition-all duration-200 backdrop-blur-md"
           >
-            Documentation
-          </a>
+            <Terminal className="h-4 w-4 text-emerald-400" />
+            <span>LAUNCH DISPATCH CONSOLE</span>
+          </Link>
         </div>
-      </main>
+
+        {/* Architecture Showcase Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 w-full pt-10">
+          <div className="cyber-card rounded-2xl p-6 flex flex-col justify-between gap-4 group">
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-semibold">
+                  AGENT FRAMEWORK
+                </span>
+                <div className="h-8 w-8 rounded-lg border border-zinc-800 bg-zinc-900/80 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/40 transition-colors">
+                  <Cpu className="h-4 w-4" />
+                </div>
+              </div>
+              <div className="text-xl font-bold font-mono text-white tracking-tight">OpenClaw Engine</div>
+              <p className="text-xs text-zinc-400 font-mono leading-relaxed">
+                Intent routing, state machines, and autonomous multi-agent swarms.
+              </p>
+            </div>
+            <div className="flex items-center gap-1 text-[11px] font-mono text-zinc-400 group-hover:text-emerald-400 transition-colors pt-2 border-t border-zinc-800/60">
+              <span>View Architecture</span>
+              <ChevronRight className="h-3.5 w-3.5" />
+            </div>
+          </div>
+
+          <div className="cyber-card rounded-2xl p-6 flex flex-col justify-between gap-4 group">
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-mono text-cyan-400 uppercase tracking-wider font-semibold">
+                  MICROSERVICES
+                </span>
+                <div className="h-8 w-8 rounded-lg border border-zinc-800 bg-zinc-900/80 flex items-center justify-center text-cyan-400 group-hover:border-cyan-500/40 transition-colors">
+                  <Server className="h-4 w-4" />
+                </div>
+              </div>
+              <div className="text-xl font-bold font-mono text-white tracking-tight">MCP Standard</div>
+              <p className="text-xs text-zinc-400 font-mono leading-relaxed">
+                Model Context Protocol servers providing modular tools & live context.
+              </p>
+            </div>
+            <div className="flex items-center gap-1 text-[11px] font-mono text-zinc-400 group-hover:text-cyan-400 transition-colors pt-2 border-t border-zinc-800/60">
+              <span>Inspect Protocol</span>
+              <ChevronRight className="h-3.5 w-3.5" />
+            </div>
+          </div>
+
+          <div className="cyber-card rounded-2xl p-6 flex flex-col justify-between gap-4 group">
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-semibold">
+                  PERFORMANCE
+                </span>
+                <div className="h-8 w-8 rounded-lg border border-zinc-800 bg-zinc-900/80 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/40 transition-colors">
+                  <Zap className="h-4 w-4" />
+                </div>
+              </div>
+              <div className="text-xl font-bold font-mono text-white tracking-tight">Sub-100ms</div>
+              <p className="text-xs text-zinc-400 font-mono leading-relaxed">
+                Optimized LLM stream latency & high-throughput parallel execution.
+              </p>
+            </div>
+            <div className="flex items-center gap-1 text-[11px] font-mono text-zinc-400 group-hover:text-emerald-400 transition-colors pt-2 border-t border-zinc-800/60">
+              <span>System Telemetry</span>
+              <ChevronRight className="h-3.5 w-3.5" />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
