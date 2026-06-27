@@ -4,11 +4,11 @@ import { Terminal, Cpu, ArrowRight, Activity, Zap, Server, ChevronRight } from "
 export default function Home() {
   return (
     <div className="flex flex-col gap-16 py-4">
-      {/* Hero Section */}
-      <section className="relative flex flex-col items-start gap-8 py-8 md:py-16">
-        {/* Ambient Radial Glows (Full Bleed Blurs) */}
-        <div className="absolute top-0 left-1/4 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-emerald-500/10 blur-[140px] pointer-events-none" />
-        <div className="absolute top-1/3 right-0 h-[450px] w-[450px] rounded-full bg-cyan-500/10 blur-[130px] pointer-events-none" />
+      {/* Hero Section - Centered Layout */}
+      <section className="relative flex flex-col items-center text-center gap-8 py-10 md:py-20">
+        {/* Ambient Radial Glows (Centered Blurs) */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[550px] w-[550px] rounded-full bg-emerald-500/10 blur-[150px] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 h-[400px] w-[400px] rounded-full bg-cyan-500/10 blur-[130px] pointer-events-none" />
 
         {/* Telemetry Badge */}
         <div className="inline-flex items-center gap-2.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 px-4 py-1.5 text-xs font-mono text-emerald-300 backdrop-blur-md shadow-[0_0_15px_-3px_rgba(16,185,129,0.2)]">
@@ -17,21 +17,21 @@ export default function Home() {
         </div>
 
         {/* Headline & Subtitle */}
-        <div className="flex flex-col gap-5 max-w-4xl">
+        <div className="flex flex-col items-center gap-5 max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
             Orchestrating Autonomous <br />
             <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(16,185,129,0.2)]">
               AI Agent Architectures
             </span>
           </h1>
-          <p className="text-lg sm:text-xl text-zinc-300 font-normal leading-relaxed max-w-2xl">
+          <p className="text-lg sm:text-xl text-zinc-300 font-normal leading-relaxed max-w-2xl mx-auto">
             Specialized engineering focused on multi-model LLM workflows, MCP microservices,
             and production-grade SaaS platforms. Building scalable systems with deterministic precision.
           </p>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-wrap items-center gap-4 pt-2 font-mono text-xs">
+        <div className="flex flex-wrap items-center justify-center gap-4 pt-2 font-mono text-xs">
           <Link
             href="#case-studies"
             className="group flex items-center gap-2.5 rounded-xl bg-emerald-500 px-6 py-3.5 text-zinc-950 font-bold hover:bg-emerald-400 transition-all duration-200 shadow-[0_0_25px_-5px_rgba(16,185,129,0.5)]"
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
 
         {/* Architecture Showcase Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 w-full pt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 w-full pt-12 text-left">
           <div className="cyber-card rounded-2xl p-6 flex flex-col justify-between gap-4 group">
             <div className="flex flex-col gap-3">
               <div className="flex items-center justify-between">
