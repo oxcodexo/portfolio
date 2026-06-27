@@ -97,6 +97,6 @@ Test behavior, not visual layout.
 
 Run these in order before marking done:
 
-1. `npm run lint` — fix all errors
-2. `npm run build` — fix all TypeScript errors
-3. `npm run test:run` — ensure all tests pass
+1. `pnpm lint` — fix all errors
+2. `pnpm build` — fix all TypeScript errors
+3. `pnpm test:run` — ensure all tests pass
