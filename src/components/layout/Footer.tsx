@@ -1,35 +1,39 @@
 import Link from "next/link";
-import { Mail, ShieldCheck, Cpu } from "lucide-react";
+import { Mail, MapPin, Cpu } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="w-full border-t border-zinc-800/80 bg-zinc-950 text-zinc-400 py-12 px-4 sm:px-6 lg:px-8 font-mono text-xs">
-      <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6">
-        {/* Left: Telemetry & Stack Info */}
+      <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-8">
+        {/* Left: Identity & Location */}
         <div className="flex flex-col gap-2 text-center md:text-left">
-          <div className="flex items-center justify-center md:justify-start gap-2 text-zinc-200 font-bold tracking-wider">
+          <div className="flex items-center justify-center md:justify-start gap-2 text-zinc-100 font-bold tracking-wider">
             <Cpu className="h-4 w-4 text-emerald-400" />
             <span>HICHAM KRAOU // SYSTEMS ARCHITECT</span>
           </div>
-          <p className="text-zinc-400 text-[11px] tracking-tight">
-            NEXT.JS 16 App Router &bull; REACT 19 &bull; AUTONOMOUS AGENT ORCHESTRATION &bull; TAILWIND v4
+          <p className="text-zinc-400 text-[11px] flex items-center justify-center md:justify-start gap-1.5 pt-0.5">
+            <MapPin className="h-3 w-3 text-emerald-400" />
+            <span>Rabat, Morocco &bull; Available for Global Remote Projects</span>
           </p>
         </div>
 
-        {/* Center: Security / Verification Badge */}
-        <div className="flex items-center gap-2 rounded-md border border-zinc-800 bg-zinc-900/40 px-3 py-1.5 text-[11px] text-zinc-400">
-          <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
-          <span>PRODUCTION-READY ARCHITECTURE</span>
+        {/* Center: Quick Nav Links */}
+        <div className="flex flex-wrap items-center justify-center gap-6 text-[11px] uppercase tracking-wider text-zinc-400">
+          <Link href="#about" className="hover:text-emerald-400 transition-colors">About</Link>
+          <Link href="#experience" className="hover:text-emerald-400 transition-colors">Experience</Link>
+          <Link href="#stack" className="hover:text-emerald-400 transition-colors">Stack</Link>
+          <Link href="#lab" className="hover:text-emerald-400 transition-colors">AI Lab</Link>
+          <Link href="#contact" className="hover:text-emerald-400 transition-colors">Contact</Link>
         </div>
 
-        {/* Right: Social & Copyright */}
+        {/* Right: Verified Social Links & Copyright */}
         <div className="flex flex-col items-center md:items-end gap-3">
-          <div className="flex items-center gap-4 text-zinc-400">
+          <div className="flex items-center gap-4 text-zinc-300">
             <Link
               href="https://github.com/oxcodexo"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-emerald-400 transition-colors"
+              className="p-2 rounded-lg border border-zinc-800 bg-zinc-900 hover:text-white hover:border-emerald-500/50 transition-all"
               aria-label="GitHub Profile"
             >
               <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
@@ -37,23 +41,23 @@ export function Footer() {
               </svg>
             </Link>
             <Link
-              href="https://linkedin.com/in/hichamkraou"
+              href="https://linkedin.com/in/oxcodexo"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-emerald-400 transition-colors"
+              className="p-2 rounded-lg border border-zinc-800 bg-zinc-900 hover:text-white hover:border-cyan-500/50 transition-all"
               aria-label="LinkedIn Profile"
             >
               <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
             </Link>
-            <Link
-              href="mailto:contact@hichamkraou.com"
-              className="hover:text-emerald-400 transition-colors"
-              aria-label="Email Contact"
+            <a
+              href="mailto:hichamkraou1@gmail.com"
+              className="p-2 rounded-lg border border-zinc-800 bg-zinc-900 hover:text-white hover:border-emerald-500/50 transition-all"
+              aria-label="Direct Email"
             >
               <Mail className="h-4 w-4" />
-            </Link>
+            </a>
           </div>
           <span className="text-[10px] text-zinc-400">
             &copy; {new Date().getFullYear()} Hicham Kraou. All rights reserved.

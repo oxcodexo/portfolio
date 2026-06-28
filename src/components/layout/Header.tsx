@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, Terminal, Cpu } from "lucide-react";
+import { Menu, X, Cpu } from "lucide-react";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,7 +12,7 @@ export function Header() {
     { name: "Experience", href: "#experience" },
     { name: "Stack", href: "#stack" },
     { name: "AI Lab", href: "#lab" },
-    { name: "Dispatch", href: "#dispatch" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -48,25 +48,15 @@ export function Header() {
           ))}
         </nav>
 
-        {/* System status & Telemetry CTA */}
+        {/* Career Availability Status Badge */}
         <div className="hidden sm:flex items-center gap-4">
-          <div className="flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/80 px-3 py-1 text-xs font-mono">
+          <div className="flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/40 px-3.5 py-1.5 text-xs font-mono">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
             </span>
-            <span className="text-zinc-300 font-semibold">SYS_OK</span>
-            <span className="text-zinc-600">|</span>
-            <span className="text-emerald-400 font-semibold">200 OK</span>
+            <span className="text-emerald-300 font-semibold uppercase tracking-wider text-[11px]">AVAILABLE FOR WORK</span>
           </div>
-
-          <Link
-            href="#dispatch"
-            className="flex items-center gap-2 rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-3.5 py-1.5 text-xs font-mono font-semibold text-emerald-300 hover:bg-emerald-500/20 hover:border-emerald-500/60 hover:shadow-[0_0_15px_-3px_rgba(16,185,129,0.3)] transition-all"
-          >
-            <Terminal className="h-3.5 w-3.5 text-emerald-400" />
-            <span>/contact</span>
-          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -95,16 +85,8 @@ export function Header() {
           <div className="pt-3 flex items-center justify-between border-t border-zinc-800/80">
             <div className="flex items-center gap-2 text-xs font-mono text-zinc-400">
               <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
-              <span>SYS_OK</span>
+              <span className="text-emerald-300 font-semibold">AVAILABLE FOR WORK</span>
             </div>
-            <Link
-              href="#dispatch"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center gap-2 rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-3 py-1.5 text-xs font-mono text-emerald-300"
-            >
-              <Terminal className="h-3.5 w-3.5" />
-              <span>/contact</span>
-            </Link>
           </div>
         </div>
       )}

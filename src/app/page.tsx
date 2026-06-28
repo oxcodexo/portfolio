@@ -3,7 +3,7 @@ import { AboutSection } from "@/components/home/AboutSection";
 import { ExperienceTimelineSection } from "@/components/projects/ExperienceTimelineSection";
 import { TechStackSection } from "@/components/home/TechStackSection";
 import { AgentSandboxSection } from "@/components/home/AgentSandboxSection";
-import { DispatchConsole } from "@/components/dispatch/DispatchConsole";
+import { ContactSection } from "@/components/home/ContactSection";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <ExperienceTimelineSection />
       <TechStackSection />
       <AgentSandboxSection />
-      <DispatchConsole />
+      <ContactSection />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Terminal, Cpu, ArrowRight, Activity, Zap, Server, ChevronRight, UserCheck, Sparkles } from "lucide-react";
+import { Cpu, ArrowRight, Activity, Zap, Server, ChevronRight, UserCheck, Sparkles } from "lucide-react";
 
 export function HeroSection() {
   return (
