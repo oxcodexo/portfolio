@@ -8,9 +8,10 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Architecture", href: "#architecture" },
-    { name: "Case Studies", href: "#case-studies" },
+    { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
     { name: "Stack", href: "#stack" },
+    { name: "AI Lab", href: "#lab" },
     { name: "Dispatch", href: "#dispatch" },
   ];
 

@@ -1,59 +1,60 @@
 import Link from "next/link";
-import { Terminal, Cpu, ArrowRight, Activity, Zap, Server, ChevronRight } from "lucide-react";
-import { InteractiveAgentSandbox } from "./InteractiveAgentSandbox";
+import { Terminal, Cpu, ArrowRight, Activity, Zap, Server, ChevronRight, UserCheck, Sparkles } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center text-center gap-8 py-10 md:py-16">
+    <section className="relative flex flex-col items-center text-center gap-8 py-12 md:py-20">
       {/* Ambient Radial Glows (Centered Blurs) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[550px] w-[550px] rounded-full bg-emerald-500/10 blur-[150px] pointer-events-none" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 h-[400px] w-[400px] rounded-full bg-cyan-500/10 blur-[130px] pointer-events-none" />
 
-      {/* Telemetry Badge */}
+      {/* Persona Badge */}
       <div className="inline-flex items-center gap-2.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 px-4 py-1.5 text-xs font-mono text-emerald-300 backdrop-blur-md shadow-[0_0_15px_-3px_rgba(16,185,129,0.2)]">
-        <Activity className="h-3.5 w-3.5 animate-pulse text-emerald-400" />
-        <span className="font-semibold tracking-wide">SYSTEMS ARCHITECT &bull; AI-FIRST FOCUS</span>
+        <UserCheck className="h-3.5 w-3.5 text-emerald-400" />
+        <span className="font-semibold tracking-wide">SYSTEMS ARCHITECT &bull; RABAT, MOROCCO</span>
       </div>
 
-      {/* Headline & Subtitle */}
-      <div className="flex flex-col items-center gap-5 max-w-4xl mx-auto">
+      {/* Personal Headline & Intro */}
+      <div className="flex flex-col items-center gap-6 max-w-4xl mx-auto">
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
-          Orchestrating Autonomous <br />
-          <span className="bg-linear-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(16,185,129,0.2)]">
-            AI Agent Architectures
-          </span>
+          Hi, I&apos;m <span className="bg-linear-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(16,185,129,0.2)]">Hicham Kraou</span>
         </h1>
-        <p className="text-lg sm:text-xl text-zinc-300 font-normal leading-relaxed max-w-2xl mx-auto">
-          Specialized engineering focused on multi-model LLM workflows, MCP microservices,
-          and production-grade SaaS platforms. Building scalable systems with deterministic precision.
+        <p className="text-xl sm:text-2xl text-zinc-200 font-mono font-medium max-w-3xl mx-auto leading-relaxed">
+          Full Stack &amp; AI Systems Architect specializing in autonomous agent swarms, multi-model LLM platforms, and enterprise SaaS systems.
+        </p>
+        <p className="text-sm sm:text-base text-zinc-400 font-sans max-w-2xl mx-auto leading-relaxed">
+          Designing scalable multi-agent gateways (OpenClaw), natural-language-to-SQL microservices (MCP standard), and production-grade full-stack applications with deterministic precision.
         </p>
       </div>
 
       {/* Action Buttons */}
       <div className="flex flex-wrap items-center justify-center gap-4 pt-2 font-mono text-xs">
         <Link
-          href="#case-studies"
+          href="#about"
           className="group flex items-center gap-2.5 rounded-xl bg-emerald-500 px-6 py-3.5 text-zinc-950 font-bold hover:bg-emerald-400 transition-all duration-200 shadow-[0_0_25px_-5px_rgba(16,185,129,0.5)]"
         >
-          <span>EXPLORE CASE STUDIES</span>
+          <span>EXPLORE PROFILE &amp; BIO</span>
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </Link>
 
         <Link
-          href="#dispatch"
+          href="#experience"
           className="flex items-center gap-2.5 rounded-xl border border-zinc-800 bg-zinc-900/90 px-6 py-3.5 text-zinc-200 hover:border-zinc-700 hover:text-white hover:bg-zinc-800/80 transition-all duration-200 backdrop-blur-md"
         >
-          <Terminal className="h-4 w-4 text-emerald-400" />
-          <span>LAUNCH DISPATCH CONSOLE</span>
+          <Cpu className="h-4 w-4 text-cyan-400" />
+          <span>CAREER HISTORY</span>
+        </Link>
+
+        <Link
+          href="#lab"
+          className="flex items-center gap-2.5 rounded-xl border border-zinc-800 bg-zinc-900/90 px-6 py-3.5 text-zinc-200 hover:border-zinc-700 hover:text-white hover:bg-zinc-800/80 transition-all duration-200 backdrop-blur-md"
+        >
+          <Sparkles className="h-4 w-4 text-emerald-400" />
+          <span>TEST AI LAB SIMULATION</span>
         </Link>
       </div>
 
-      {/* Interactive Agent Sandbox Hero Widget */}
-      <div className="w-full max-w-5xl pt-4">
-        <InteractiveAgentSandbox />
-      </div>
-
-      {/* Architecture Showcase Highlights */}
+      {/* Hero Quick Architecture Highlights */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 w-full pt-12 text-left">
         <div className="cyber-card rounded-2xl p-6 flex flex-col justify-between gap-4 group">
           <div className="flex flex-col gap-3">
@@ -91,7 +92,7 @@ export function HeroSection() {
             </div>
             <div className="text-xl font-bold font-mono text-white tracking-tight">MCP Standard</div>
             <p className="text-xs text-zinc-400 font-mono leading-relaxed">
-              Model Context Protocol servers providing modular tools & live context.
+              Model Context Protocol servers providing modular tools &amp; live context.
             </p>
           </div>
           <Link
@@ -115,7 +116,7 @@ export function HeroSection() {
             </div>
             <div className="text-xl font-bold font-mono text-white tracking-tight">Sub-100ms</div>
             <p className="text-xs text-zinc-400 font-mono leading-relaxed">
-              Optimized LLM stream latency & high-throughput parallel execution.
+              Optimized LLM stream latency &amp; high-throughput parallel execution.
             </p>
           </div>
           <Link
