@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { User, MapPin, Mail, Award, Code2, Cpu, Sparkles } from "lucide-react";
 
 export function AboutSection() {
@@ -20,14 +21,25 @@ export function AboutSection() {
         <div className="lg:col-span-7 cyber-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between gap-6">
           <div className="flex flex-col gap-4">
             <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-zinc-800/80">
-              <div>
-                <h3 className="text-2xl font-bold text-white font-mono">Hicham Kraou</h3>
-                <p className="text-sm font-mono text-emerald-400 flex items-center gap-1.5 pt-1">
-                  <MapPin className="h-3.5 w-3.5 text-emerald-400" />
-                  <span>Rabat, Morocco</span>
-                  <span className="text-zinc-600">&bull;</span>
-                  <span className="text-zinc-300">Available for Remote / Global Projects</span>
-                </p>
+              <div className="flex items-center gap-4">
+                <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-full overflow-hidden border-2 border-emerald-500/40 shrink-0 shadow-lg">
+                  <Image
+                    src="/avatar.png"
+                    alt="Hicham Kraou"
+                    width={96}
+                    height={96}
+                    className="object-cover h-full w-full"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white font-mono">Hicham Kraou</h3>
+                  <p className="text-sm font-mono text-emerald-400 flex flex-wrap items-center gap-1.5 pt-1">
+                    <MapPin className="h-3.5 w-3.5 text-emerald-400" />
+                    <span>Rabat, Morocco</span>
+                    <span className="text-zinc-600 font-normal hidden sm:inline">&bull;</span>
+                    <span className="text-zinc-300 text-xs font-normal block sm:inline">Available for Remote Projects</span>
+                  </p>
+                </div>
               </div>
               <div className="flex items-center gap-2">
                 <Link

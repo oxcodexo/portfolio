@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Cpu, ArrowRight, Activity, Zap, Server, ChevronRight, UserCheck } from "lucide-react";
+import Image from "next/image";
+import { Cpu, ArrowRight, Zap, Server, ChevronRight } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -8,10 +9,19 @@ export function HeroSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[550px] w-[550px] rounded-full bg-emerald-500/10 blur-[150px] pointer-events-none" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 h-[400px] w-[400px] rounded-full bg-cyan-500/10 blur-[130px] pointer-events-none" />
 
-      {/* Persona Badge */}
-      <div className="inline-flex items-center gap-2.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 px-4 py-1.5 text-xs font-mono text-emerald-300 backdrop-blur-md shadow-[0_0_15px_-3px_rgba(16,185,129,0.2)]">
-        <UserCheck className="h-3.5 w-3.5 text-emerald-400" />
-        <span className="font-semibold tracking-wide">SYSTEMS ARCHITECT &bull; RABAT, MOROCCO</span>
+      {/* Profile Avatar Frame */}
+      <div className="relative group">
+        <div className="absolute -inset-1.5 rounded-full bg-linear-to-r from-emerald-500 via-teal-400 to-cyan-500 opacity-75 blur-lg group-hover:opacity-100 transition duration-300"></div>
+        <div className="relative h-44 w-44 sm:h-56 sm:w-56 lg:h-64 lg:w-64 rounded-full overflow-hidden border-4 border-zinc-950 shadow-2xl">
+          <Image
+            src="/avatar.png"
+            alt="Hicham Kraou"
+            width={256}
+            height={256}
+            className="object-cover h-full w-full"
+            priority
+          />
+        </div>
       </div>
 
       {/* Personal Headline & Intro */}
