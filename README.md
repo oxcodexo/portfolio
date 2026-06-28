@@ -11,7 +11,6 @@ Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind
 - 👤 **Human-Centric Personal Brand**: Clean, professional personal portfolio layout presenting Hicham Kraou (based in Rabat, Morocco) front and center with career bio, education, and credentials.
 - 💼 **Featured Career History**: Consolidated timeline displaying real-world production deployments (OpenClaw, Qrox live platform, HRAI, OmniPilot-CX, and Healthcare SaaS) with direct links to dedicated architectural case studies (`/projects/[slug]`).
 - 🛠️ **Categorized Tech Stack Matrix**: Structured grid organizing technical capabilities across AI & Autonomous Agents, Full-Stack Frontend, Backend Microservices, and Databases/DevOps.
-- 🧪 **Interactive AI Lab & Sandbox**: Dedicated simulation lab section where visitors can test drive real-time multi-agent execution swarms and intent routing algorithms inspired by OpenClaw.
 - ✉️ **Direct Contact & Connect**: Clean, personal connection hub providing direct links to Email (`hichamkraou1@gmail.com`), LinkedIn ([`oxcodexo`](https://linkedin.com/in/oxcodexo)), and GitHub ([`oxcodexo`](https://github.com/oxcodexo)).
 - 📐 **Hybrid Multi-Page Routing**: Independent Next.js routes ensuring canonical URLs and custom OpenGraph metadata for platform sharing, paired with smooth client transitions.
 
@@ -42,13 +41,12 @@ portfolio/
 │   │   ├── layout.tsx         # Root layout with headers & footers
 │   │   └── page.tsx           # Main homepage route
 │   ├── components/            # Reusable React components
-│   │   ├── home/              # HeroSection, AboutSection, TechStackSection, AgentSandboxSection, ContactSection
+│   │   ├── home/              # HeroSection, AboutSection, TechStackSection, ContactSection
 │   │   ├── layout/            # Header (Navigation bar), Footer
 │   │   ├── projects/          # ExperienceTimelineSection & case study components
 │   │   └── ui/                # Base Shadcn UI components
-│   └── lib/                   # Controllers, mock engines & domain registry
-│       ├── projects/          # Project data registry & case study specifications
-│       └── sandbox/           # Agent sandbox execution simulation engines
+│   └── lib/                   # Controllers & domain registry
+│       └── projects/          # Project data registry & case study specifications
 ├── CONTEXT.md                 # Project domain model & ubiquitous language
 ├── AGENTS.md                  # Project agent rules & conventions
 └── package.json               # Dependencies & build scripts
@@ -87,7 +85,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ## 🧪 Testing & Verification
 
-The suite uses **Vitest** for unit and integration testing across components, engine controllers, and routing specs.
+The suite uses **Vitest** for unit and integration testing across components and routing specs.
 
 Run tests once:
 ```bash

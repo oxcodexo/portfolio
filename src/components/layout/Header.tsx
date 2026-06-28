@@ -11,7 +11,6 @@ export function Header() {
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
     { name: "Stack", href: "#stack" },
-    { name: "AI Lab", href: "#lab" },
     { name: "Contact", href: "#contact" },
   ];
 

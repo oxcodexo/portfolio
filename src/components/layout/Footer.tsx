@@ -22,7 +22,6 @@ export function Footer() {
           <Link href="#about" className="hover:text-emerald-400 transition-colors">About</Link>
           <Link href="#experience" className="hover:text-emerald-400 transition-colors">Experience</Link>
           <Link href="#stack" className="hover:text-emerald-400 transition-colors">Stack</Link>
-          <Link href="#lab" className="hover:text-emerald-400 transition-colors">AI Lab</Link>
           <Link href="#contact" className="hover:text-emerald-400 transition-colors">Contact</Link>
         </div>
 

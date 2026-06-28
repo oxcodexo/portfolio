@@ -1,19 +1,8 @@
-import { describe, it, expect, vi } from 'vitest';
-import { getInitialState } from '@/lib/sandbox/agentSandboxEngine';
-
-vi.mock('react', async () => {
-  const actual = await vi.importActual('react');
-  return {
-    ...actual,
-    useReducer: vi.fn((reducer, arg, init) => [init ? init(arg) : getInitialState(), vi.fn()]),
-    useEffect: vi.fn(),
-  };
-});
-
+import { describe, it, expect } from 'vitest';
 import { HeroSection } from '../HeroSection';
 
 describe('HeroSection component', () => {
-  it('renders hero title, sandbox widget, and architecture showcase highlights', () => {
+  it('renders hero title, personal credentials, and action buttons', () => {
     const JSX = HeroSection();
     expect(JSX).toBeDefined();
     expect(JSX.type).toBe('section');

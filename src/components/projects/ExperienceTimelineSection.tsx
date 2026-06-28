@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Briefcase, Calendar, ExternalLink, ShieldCheck, Cpu, Database, Server, Zap, ChevronRight } from "lucide-react";
 
@@ -111,11 +110,10 @@ export function ExperienceTimelineSection() {
             <div key={idx} className="relative flex items-start gap-4 sm:gap-8 pl-1.5 sm:pl-3">
               {/* Timeline Marker Icon */}
               <div
-                className={`z-10 flex h-7 w-7 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl border bg-zinc-950 ${
-                  isEmerald
+                className={`z-10 flex h-7 w-7 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl border bg-zinc-950 ${isEmerald
                     ? "border-emerald-500/40 text-emerald-400 shadow-[0_0_15px_-3px_rgba(16,185,129,0.3)]"
                     : "border-cyan-500/40 text-cyan-400 shadow-[0_0_15px_-3px_rgba(6,182,212,0.3)]"
-                }`}
+                  }`}
               >
                 <IconComponent className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
@@ -123,15 +121,13 @@ export function ExperienceTimelineSection() {
               {/* Card Body */}
               <div
                 onClick={() => exp.caseStudyRoute && router.push(exp.caseStudyRoute)}
-                className={`cyber-card rounded-2xl p-6 flex flex-col gap-4 flex-1 group transition-all duration-300 transform ${
-                  exp.caseStudyRoute
-                    ? `cursor-pointer hover:-translate-y-1.5 ${
-                        isEmerald
-                          ? "hover:border-emerald-500/50 hover:shadow-[0_0_30px_-5px_rgba(16,185,129,0.25)]"
-                          : "hover:border-cyan-500/50 hover:shadow-[0_0_30px_-5px_rgba(6,182,212,0.25)]"
-                      }`
+                className={`cyber-card rounded-2xl p-6 flex flex-col gap-4 flex-1 group transition-all duration-300 transform ${exp.caseStudyRoute
+                    ? `cursor-pointer hover:-translate-y-1.5 ${isEmerald
+                      ? "hover:border-emerald-500/50 hover:shadow-[0_0_30px_-5px_rgba(16,185,129,0.25)]"
+                      : "hover:border-cyan-500/50 hover:shadow-[0_0_30px_-5px_rgba(6,182,212,0.25)]"
+                    }`
                     : ""
-                }`}
+                  }`}
               >
                 <div className="flex flex-wrap items-start justify-between gap-2 pb-3 border-b border-zinc-800/80">
                   <div>
@@ -187,11 +183,10 @@ export function ExperienceTimelineSection() {
 
                   {exp.caseStudyRoute && (
                     <div
-                      className={`inline-flex items-center gap-1.5 text-xs font-mono font-semibold px-3 py-1.5 rounded-lg border transition-all ${
-                        isEmerald
+                      className={`inline-flex items-center gap-1.5 text-xs font-mono font-semibold px-3 py-1.5 rounded-lg border transition-all ${isEmerald
                           ? "border-emerald-500/40 text-emerald-300 bg-emerald-500/10 group-hover:bg-emerald-500/20 group-hover:border-emerald-500/60"
                           : "border-cyan-500/40 text-cyan-300 bg-cyan-500/10 group-hover:bg-cyan-500/20 group-hover:border-cyan-500/60"
-                      }`}
+                        }`}
                     >
                       <span>Inspect Architectural Breakdown</span>
                       <ChevronRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />

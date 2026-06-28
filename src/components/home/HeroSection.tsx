@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Cpu, ArrowRight, Activity, Zap, Server, ChevronRight, UserCheck, Sparkles } from "lucide-react";
+import { Cpu, ArrowRight, Activity, Zap, Server, ChevronRight, UserCheck } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -43,14 +43,6 @@ export function HeroSection() {
         >
           <Cpu className="h-4 w-4 text-cyan-400" />
           <span>CAREER HISTORY</span>
-        </Link>
-
-        <Link
-          href="#lab"
-          className="flex items-center gap-2.5 rounded-xl border border-zinc-800 bg-zinc-900/90 px-6 py-3.5 text-zinc-200 hover:border-zinc-700 hover:text-white hover:bg-zinc-800/80 transition-all duration-200 backdrop-blur-md"
-        >
-          <Sparkles className="h-4 w-4 text-emerald-400" />
-          <span>TEST AI LAB SIMULATION</span>
         </Link>
       </div>
 
