@@ -10,6 +10,7 @@ export function DispatchConsole() {
   const [controller] = useState(() => new DispatchConsoleController());
   const [consoleState, setConsoleState] = useState(() => controller.getState());
   const [inputValue, setInputValue] = useState("");
+  const [activeCommand, setActiveCommand] = useState<string>("/contact");
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const isInitialMount = useRef(true);
@@ -31,7 +32,11 @@ export function DispatchConsole() {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      if (!inputValue.trim()) return;
+      const trimmed = inputValue.trim();
+      if (!trimmed) return;
+      if (trimmed.startsWith("/")) {
+        setActiveCommand(trimmed.toLowerCase());
+      }
       controller.executeInput(inputValue);
       setInputValue("");
       updateState();
@@ -47,6 +52,7 @@ export function DispatchConsole() {
   };
 
   const handleQuickCommand = (cmd: string) => {
+    setActiveCommand(cmd);
     controller.executeInput(cmd);
     updateState();
     inputRef.current?.focus();
@@ -89,7 +95,11 @@ export function DispatchConsole() {
               variant="outline"
               size="sm"
               onClick={() => handleQuickCommand("/contact")}
-              className="font-mono text-xs border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/10 hover:text-emerald-300 bg-zinc-900/80"
+              className={`font-mono text-xs transition-all duration-200 ${
+                activeCommand === "/contact"
+                  ? "border-emerald-500/80 text-emerald-300 bg-emerald-500/20 hover:bg-emerald-500/30 hover:text-emerald-200 hover:border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.25)] font-bold"
+                  : "border-zinc-700/80 text-zinc-400 hover:bg-zinc-800/80 hover:text-zinc-200 bg-zinc-900/80"
+              }`}
             >
               /contact
             </Button>
@@ -97,7 +107,11 @@ export function DispatchConsole() {
               variant="outline"
               size="sm"
               onClick={() => handleQuickCommand("/projects")}
-              className="font-mono text-xs border-zinc-700 text-zinc-300 hover:bg-zinc-800 bg-zinc-900/80"
+              className={`font-mono text-xs transition-all duration-200 ${
+                activeCommand === "/projects"
+                  ? "border-emerald-500/80 text-emerald-300 bg-emerald-500/20 hover:bg-emerald-500/30 hover:text-emerald-200 hover:border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.25)] font-bold"
+                  : "border-zinc-700/80 text-zinc-400 hover:bg-zinc-800/80 hover:text-zinc-200 bg-zinc-900/80"
+              }`}
             >
               /projects
             </Button>
@@ -105,7 +119,11 @@ export function DispatchConsole() {
               variant="outline"
               size="sm"
               onClick={() => handleQuickCommand("/help")}
-              className="font-mono text-xs border-zinc-700 text-zinc-300 hover:bg-zinc-800 bg-zinc-900/80"
+              className={`font-mono text-xs transition-all duration-200 ${
+                activeCommand === "/help"
+                  ? "border-emerald-500/80 text-emerald-300 bg-emerald-500/20 hover:bg-emerald-500/30 hover:text-emerald-200 hover:border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.25)] font-bold"
+                  : "border-zinc-700/80 text-zinc-400 hover:bg-zinc-800/80 hover:text-zinc-200 bg-zinc-900/80"
+              }`}
             >
               /help
             </Button>
