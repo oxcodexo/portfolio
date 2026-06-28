@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Briefcase, Calendar, ExternalLink, ShieldCheck, Cpu, Database, Server, Zap, ChevronRight } from "lucide-react";
 
 export function ExperienceTimelineSection() {
+  const router = useRouter();
+
   const experiences = [
     {
       title: "OpenClaw AI Agent Platform",
@@ -101,6 +106,7 @@ export function ExperienceTimelineSection() {
         {experiences.map((exp, idx) => {
           const IconComponent = exp.icon;
           const isEmerald = exp.accentColor === "emerald";
+
           return (
             <div key={idx} className="relative flex items-start gap-4 sm:gap-8 pl-1.5 sm:pl-3">
               {/* Timeline Marker Icon */}
@@ -115,21 +121,35 @@ export function ExperienceTimelineSection() {
               </div>
 
               {/* Card Body */}
-              <div className="cyber-card rounded-2xl p-6 flex flex-col gap-4 flex-1 group">
+              <div
+                onClick={() => exp.caseStudyRoute && router.push(exp.caseStudyRoute)}
+                className={`cyber-card rounded-2xl p-6 flex flex-col gap-4 flex-1 group transition-all duration-300 transform ${
+                  exp.caseStudyRoute
+                    ? `cursor-pointer hover:-translate-y-1.5 ${
+                        isEmerald
+                          ? "hover:border-emerald-500/50 hover:shadow-[0_0_30px_-5px_rgba(16,185,129,0.25)]"
+                          : "hover:border-cyan-500/50 hover:shadow-[0_0_30px_-5px_rgba(6,182,212,0.25)]"
+                      }`
+                    : ""
+                }`}
+              >
                 <div className="flex flex-wrap items-start justify-between gap-2 pb-3 border-b border-zinc-800/80">
                   <div>
                     <div className="flex flex-wrap items-center gap-2">
-                      <h3 className="text-xl font-bold font-mono text-white tracking-tight">{exp.title}</h3>
+                      <h3 className={`text-xl font-bold font-mono text-white tracking-tight ${exp.caseStudyRoute ? (isEmerald ? "group-hover:text-emerald-300" : "group-hover:text-cyan-300") : ""} transition-colors`}>
+                        {exp.title}
+                      </h3>
                       {exp.link && (
-                        <Link
+                        <a
                           href={exp.link}
                           target="_blank"
                           rel="noreferrer"
+                          onClick={(e) => e.stopPropagation()}
                           className="inline-flex items-center gap-1 text-xs font-mono text-cyan-400 hover:underline bg-cyan-950/40 border border-cyan-500/30 px-2.5 py-0.5 rounded-md"
                         >
                           <span>Live Platform</span>
                           <ExternalLink className="h-3 w-3" />
-                        </Link>
+                        </a>
                       )}
                     </div>
                     <p className="text-xs font-mono text-zinc-400 pt-1">{exp.subtitle}</p>
@@ -166,17 +186,16 @@ export function ExperienceTimelineSection() {
                   </div>
 
                   {exp.caseStudyRoute && (
-                    <Link
-                      href={exp.caseStudyRoute}
+                    <div
                       className={`inline-flex items-center gap-1.5 text-xs font-mono font-semibold px-3 py-1.5 rounded-lg border transition-all ${
                         isEmerald
-                          ? "border-emerald-500/40 text-emerald-300 bg-emerald-500/10 hover:bg-emerald-500/20 hover:border-emerald-500/60"
-                          : "border-cyan-500/40 text-cyan-300 bg-cyan-500/10 hover:bg-cyan-500/20 hover:border-cyan-500/60"
+                          ? "border-emerald-500/40 text-emerald-300 bg-emerald-500/10 group-hover:bg-emerald-500/20 group-hover:border-emerald-500/60"
+                          : "border-cyan-500/40 text-cyan-300 bg-cyan-500/10 group-hover:bg-cyan-500/20 group-hover:border-cyan-500/60"
                       }`}
                     >
                       <span>Inspect Architectural Breakdown</span>
-                      <ChevronRight className="h-3.5 w-3.5" />
-                    </Link>
+                      <ChevronRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                    </div>
                   )}
                 </div>
               </div>
