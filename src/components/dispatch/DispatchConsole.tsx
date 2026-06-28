@@ -10,15 +10,22 @@ export function DispatchConsole() {
   const [controller] = useState(() => new DispatchConsoleController());
   const [consoleState, setConsoleState] = useState(() => controller.getState());
   const [inputValue, setInputValue] = useState("");
-  const logsEndRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const isInitialMount = useRef(true);
 
   const updateState = () => {
     setConsoleState(controller.getState());
   };
 
   useEffect(() => {
-    logsEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+    if (containerRef.current) {
+      containerRef.current.scrollTop = containerRef.current.scrollHeight;
+    }
   }, [consoleState.logs]);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -128,6 +135,7 @@ export function DispatchConsole() {
 
           {/* Terminal Output Logs */}
           <div
+            ref={containerRef}
             className="p-4 sm:p-6 font-mono text-xs md:text-sm h-[380px] overflow-y-auto space-y-3 bg-zinc-950/60 leading-relaxed text-zinc-300"
             onClick={() => inputRef.current?.focus()}
           >
@@ -167,7 +175,6 @@ export function DispatchConsole() {
                 </div>
               );
             })}
-            <div ref={logsEndRef} />
           </div>
 
           {/* Command Prompt Input Field */}
