@@ -1,6 +1,6 @@
-# Portfolio of Hicham Kraou — Systems Architect (AI-First Focus)
+# Portfolio of Hicham Kraou — Systems Architect & AI/Full-Stack Developer
 
-A high-performance, production-grade personal portfolio engineered to showcase deep full-stack SaaS capabilities, autonomous AI agent orchestration systems, MCP microservices, and multi-model LLM architectures.
+A high-performance, production-grade personal developer portfolio engineered to showcase deep full-stack SaaS capabilities, autonomous AI agent orchestration systems, MCP microservices, and multi-model LLM architectures.
 
 Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS v4**, and **Shadcn UI**, adhering to a **Cyber-Architect Aesthetic** with dark zinc tones, glassmorphic card surfaces, and neon emerald/cyan accents.
 
@@ -8,11 +8,11 @@ Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind
 
 ## 🌟 Core Highlights & Architectural Features
 
-- 🤖 **Interactive Agent Sandbox**: Embedded interactive hero widget simulating real-time multi-agent execution pipelines, task delegation, and intent routing engines (e.g., OpenClaw framework).
-- 🚀 **Flagship Case Studies**: Dedicated routes (`/projects/[slug]`) providing deep architectural breakdowns, interactive counters, quantitative telemetry, and system interaction diagrams for flagship platforms (e.g., OpenClaw, Qrox, HRAI, OmniPilot-CX).
-- 🏢 **Enterprise Solution Cards**: Architectural summary grid for specialized enterprise deployments across AI Evaluation, Healthcare SaaS, and Computer Vision workflows.
-- 💻 **Dispatch Console**: Terminal-inspired interactive contact module accepting CLI-style commands (e.g., `/contact`) with direct fallback channels (Email, GitHub, LinkedIn).
-- 🎨 **Cyber-Architect Design System**: Modern design language incorporating dark zinc surfaces, high-contrast typography (JetBrains Mono & Geist), and responsive layout components.
+- 👤 **Human-Centric Personal Brand**: Clean, professional personal portfolio layout presenting Hicham Kraou (based in Rabat, Morocco) front and center with career bio, education, and credentials.
+- 💼 **Featured Career History**: Consolidated timeline displaying real-world production deployments (OpenClaw, Qrox live platform, HRAI, OmniPilot-CX, and Healthcare SaaS) with direct links to dedicated architectural case studies (`/projects/[slug]`).
+- 🛠️ **Categorized Tech Stack Matrix**: Structured grid organizing technical capabilities across AI & Autonomous Agents, Full-Stack Frontend, Backend Microservices, and Databases/DevOps.
+- 🧪 **Interactive AI Lab & Sandbox**: Dedicated simulation lab section where visitors can test drive real-time multi-agent execution swarms and intent routing algorithms inspired by OpenClaw.
+- ✉️ **Direct Contact & Connect**: Clean, personal connection hub providing direct links to Email (`hichamkraou1@gmail.com`), LinkedIn ([`oxcodexo`](https://linkedin.com/in/oxcodexo)), and GitHub ([`oxcodexo`](https://github.com/oxcodexo)).
 - 📐 **Hybrid Multi-Page Routing**: Independent Next.js routes ensuring canonical URLs and custom OpenGraph metadata for platform sharing, paired with smooth client transitions.
 
 ---
@@ -42,13 +42,11 @@ portfolio/
 │   │   ├── layout.tsx         # Root layout with headers & footers
 │   │   └── page.tsx           # Main homepage route
 │   ├── components/            # Reusable React components
-│   │   ├── dispatch/          # Interactive terminal contact console
-│   │   ├── home/              # Hero section & Interactive Agent Sandbox
-│   │   ├── layout/            # Navigation bar, Footer, container wrappers
-│   │   ├── projects/          # Case study cards & enterprise grid modules
+│   │   ├── home/              # HeroSection, AboutSection, TechStackSection, AgentSandboxSection, ContactSection
+│   │   ├── layout/            # Header (Navigation bar), Footer
+│   │   ├── projects/          # ExperienceTimelineSection & case study components
 │   │   └── ui/                # Base Shadcn UI components
 │   └── lib/                   # Controllers, mock engines & domain registry
-│       ├── dispatch/          # Dispatch console command logic & state
 │       ├── projects/          # Project data registry & case study specifications
 │       └── sandbox/           # Agent sandbox execution simulation engines
 ├── CONTEXT.md                 # Project domain model & ubiquitous language
@@ -124,4 +122,6 @@ For deep architectural decisions and project guidelines, refer to:
 
 ## 📬 Contact & Connect
 
+- **Email**: [hichamkraou1@gmail.com](mailto:hichamkraou1@gmail.com)
+- **LinkedIn**: [@oxcodexo](https://linkedin.com/in/oxcodexo)
 - **GitHub**: [@oxcodexo](https://github.com/oxcodexo)
