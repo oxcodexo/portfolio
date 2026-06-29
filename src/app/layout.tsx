@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   title: "Hicham Kraou | Systems Architect & AI Engineering",
   description:
     "Personal portfolio of Hicham Kraou - Systems Architect specializing in autonomous AI agent systems, MCP microservices, and multi-model LLM architectures.",
+  icons: {
+    icon: "/avatar.png",
+    shortcut: "/avatar.png",
+    apple: "/avatar.png",
+  },
 };
 
 export default function RootLayout({
