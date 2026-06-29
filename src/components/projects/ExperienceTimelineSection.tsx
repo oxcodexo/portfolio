@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { Briefcase, Calendar, ExternalLink, ShieldCheck, Cpu, Database, Server, Zap, ChevronRight } from "lucide-react";
+import { motion } from "motion/react";
 
 export function ExperienceTimelineSection() {
   const router = useRouter();
@@ -88,7 +89,14 @@ export function ExperienceTimelineSection() {
   ];
 
   return (
-    <section id="experience" className="relative flex flex-col gap-8 py-12 border-t border-zinc-800/60">
+    <motion.section
+      id="experience"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5 }}
+      className="relative flex flex-col gap-8 py-12 border-t border-zinc-800/60"
+    >
       {/* Section Header */}
       <div className="flex flex-col gap-2">
         <div className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 uppercase tracking-widest">
@@ -107,7 +115,14 @@ export function ExperienceTimelineSection() {
           const isEmerald = exp.accentColor === "emerald";
 
           return (
-            <div key={idx} className="relative flex items-start gap-4 sm:gap-8 pl-1.5 sm:pl-3">
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.4, delay: idx * 0.1 }}
+              className="relative flex items-start gap-4 sm:gap-8 pl-1.5 sm:pl-3"
+            >
               {/* Timeline Marker Icon */}
               <div
                 className={`z-10 flex h-7 w-7 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl border bg-zinc-950 ${isEmerald
@@ -119,10 +134,11 @@ export function ExperienceTimelineSection() {
               </div>
 
               {/* Card Body */}
-              <div
+              <motion.div
+                whileHover={exp.caseStudyRoute ? { y: -4, scale: 1.005 } : {}}
                 onClick={() => exp.caseStudyRoute && router.push(exp.caseStudyRoute)}
-                className={`cyber-card rounded-2xl p-6 flex flex-col gap-4 flex-1 group transition-all duration-300 transform ${exp.caseStudyRoute
-                    ? `cursor-pointer hover:-translate-y-1.5 ${isEmerald
+                className={`cyber-card rounded-2xl p-6 flex flex-col gap-4 flex-1 group transition-all duration-300 ${exp.caseStudyRoute
+                    ? `cursor-pointer ${isEmerald
                       ? "hover:border-emerald-500/50 hover:shadow-[0_0_30px_-5px_rgba(16,185,129,0.25)]"
                       : "hover:border-cyan-500/50 hover:shadow-[0_0_30px_-5px_rgba(6,182,212,0.25)]"
                     }`
@@ -193,11 +209,11 @@ export function ExperienceTimelineSection() {
                     </div>
                   )}
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           );
         })}
       </div>
-    </section>
+    </motion.section>
   );
 }

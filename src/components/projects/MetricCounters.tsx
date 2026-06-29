@@ -1,5 +1,8 @@
+"use client";
+
 import { ArchitecturalMetric } from '@/lib/projects/types';
 import { Activity, TrendingUp, Zap } from 'lucide-react';
+import { motion } from 'motion/react';
 
 interface MetricCountersProps {
   metrics: ArchitecturalMetric[];
@@ -7,7 +10,13 @@ interface MetricCountersProps {
 
 export function MetricCounters({ metrics }: MetricCountersProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
+    <motion.div
+      initial={{ opacity: 0, y: 15 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-30px" }}
+      transition={{ duration: 0.4 }}
+      className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full"
+    >
       {metrics.map((metric, index) => {
         const isCyan = index % 2 === 1;
         const iconColorClass = isCyan ? 'text-cyan-400' : 'text-emerald-400';
@@ -16,8 +25,13 @@ export function MetricCounters({ metrics }: MetricCountersProps) {
           : 'hover:border-emerald-500/50 hover:shadow-[0_0_25px_-5px_rgba(16,185,129,0.2)]';
 
         return (
-          <div
+          <motion.div
             key={metric.label}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
+            whileHover={{ y: -3 }}
             className={`cyber-card rounded-2xl p-6 flex flex-col justify-between gap-4 transition-all duration-300 ${borderGlowClass}`}
           >
             <div className="flex flex-col gap-2">
@@ -34,7 +48,7 @@ export function MetricCounters({ metrics }: MetricCountersProps) {
               </div>
 
               <div className="pt-2">
-                <div className="text-3xl lg:text-4xl font-extrabold font-mono tracking-tight text-white animate-in fade-in duration-500">
+                <div className="text-3xl lg:text-4xl font-extrabold font-mono tracking-tight text-white">
                   <span className={isCyan ? 'text-cyan-300' : 'text-emerald-300'}>
                     {metric.value}
                   </span>
@@ -47,9 +61,9 @@ export function MetricCounters({ metrics }: MetricCountersProps) {
                 {metric.description}
               </p>
             )}
-          </div>
+          </motion.div>
         );
       })}
-    </div>
+    </motion.div>
   );
 }

@@ -1,10 +1,20 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { User, MapPin, Mail, Award, Code2, Cpu, Sparkles } from "lucide-react";
+import { motion } from "motion/react";
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative flex flex-col gap-8 py-12 border-t border-zinc-800/60">
+    <motion.section
+      id="about"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, ease: "easeOut" as const }}
+      className="relative flex flex-col gap-8 py-12 border-t border-zinc-800/60"
+    >
       {/* Section Header */}
       <div className="flex flex-col gap-2">
         <div className="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-widest">
@@ -18,7 +28,10 @@ export function AboutSection() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         {/* Profile / Bio Card */}
-        <div className="lg:col-span-7 cyber-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between gap-6">
+        <motion.div
+          whileHover={{ borderColor: "rgba(16, 185, 129, 0.4)" }}
+          className="lg:col-span-7 cyber-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between gap-6"
+        >
           <div className="flex flex-col gap-4">
             <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-zinc-800/80">
               <div className="flex items-center gap-4">
@@ -100,11 +113,15 @@ export function AboutSection() {
               <span>hichamkraou1@gmail.com</span>
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Key Architectural Metrics Grid */}
         <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
-          <div className="cyber-card rounded-2xl p-5 flex items-center gap-4">
+          <motion.div
+            whileHover={{ scale: 1.02, x: 4 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="cyber-card rounded-2xl p-5 flex items-center gap-4"
+          >
             <div className="h-12 w-12 rounded-xl border border-emerald-500/30 bg-emerald-500/10 flex items-center justify-center text-emerald-400 shrink-0">
               <Cpu className="h-6 w-6" />
             </div>
@@ -112,9 +129,13 @@ export function AboutSection() {
               <div className="text-2xl font-bold font-mono text-white">OpenClaw Swarms</div>
               <p className="text-xs font-mono text-zinc-400">Autonomous multi-agent orchestration &amp; AI web intelligence</p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="cyber-card rounded-2xl p-5 flex items-center gap-4">
+          <motion.div
+            whileHover={{ scale: 1.02, x: 4 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="cyber-card rounded-2xl p-5 flex items-center gap-4"
+          >
             <div className="h-12 w-12 rounded-xl border border-cyan-500/30 bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
               <Sparkles className="h-6 w-6" />
             </div>
@@ -122,9 +143,13 @@ export function AboutSection() {
               <div className="text-2xl font-bold font-mono text-white">500+ AI Models</div>
               <p className="text-xs font-mono text-zinc-400">Frontier multi-model chat platform (<strong className="text-cyan-300">Qrox</strong>)</p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="cyber-card rounded-2xl p-5 flex items-center gap-4">
+          <motion.div
+            whileHover={{ scale: 1.02, x: 4 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="cyber-card rounded-2xl p-5 flex items-center gap-4"
+          >
             <div className="h-12 w-12 rounded-xl border border-emerald-500/30 bg-emerald-500/10 flex items-center justify-center text-emerald-400 shrink-0">
               <Code2 className="h-6 w-6" />
             </div>
@@ -132,9 +157,9 @@ export function AboutSection() {
               <div className="text-2xl font-bold font-mono text-white">Sub-50ms Cache</div>
               <p className="text-xs font-mono text-zinc-400">High-concurrency multi-tenant SaaS (<strong className="text-emerald-300">OmniPilot-CX</strong>)</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

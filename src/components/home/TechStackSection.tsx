@@ -1,4 +1,26 @@
+"use client";
+
 import { Code2, Cpu, Database, Server } from "lucide-react";
+import { motion, Variants } from "motion/react";
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: "easeOut" as const },
+  },
+};
 
 export function TechStackSection() {
   const categories = [
@@ -46,7 +68,14 @@ export function TechStackSection() {
   ];
 
   return (
-    <section id="stack" className="relative flex flex-col gap-8 py-12 border-t border-zinc-800/60">
+    <motion.section
+      id="stack"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5 }}
+      className="relative flex flex-col gap-8 py-12 border-t border-zinc-800/60"
+    >
       {/* Section Header */}
       <div className="flex flex-col gap-2">
         <div className="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-widest">
@@ -59,12 +88,23 @@ export function TechStackSection() {
       </div>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
         {categories.map((cat, idx) => {
           const IconComponent = cat.icon;
           const isEmerald = cat.accentColor === "emerald";
           return (
-            <div key={idx} className="cyber-card rounded-2xl p-6 flex flex-col justify-between gap-4">
+            <motion.div
+              key={idx}
+              variants={cardVariants}
+              whileHover={{ y: -4 }}
+              className="cyber-card rounded-2xl p-6 flex flex-col justify-between gap-4"
+            >
               <div className="flex flex-col gap-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -86,22 +126,23 @@ export function TechStackSection() {
               {/* Skill Badges */}
               <div className="flex flex-wrap gap-2 pt-2 border-t border-zinc-800/80">
                 {cat.skills.map((skill) => (
-                  <span
+                  <motion.span
                     key={skill}
+                    whileHover={{ scale: 1.05 }}
                     className={`text-xs font-mono px-3 py-1 rounded-lg border bg-zinc-950/80 ${
                       isEmerald
                         ? "border-emerald-500/20 text-emerald-300 hover:border-emerald-500/40"
                         : "border-cyan-500/20 text-cyan-300 hover:border-cyan-500/40"
-                    } transition-colors`}
+                    } transition-colors cursor-default`}
                   >
                     {skill}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           );
         })}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }
