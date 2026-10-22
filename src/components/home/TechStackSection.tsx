@@ -28,11 +28,12 @@ export function TechStackSection() {
       title: "AI & Autonomous Agent Systems",
       icon: Cpu,
       accentColor: "emerald",
-      description: "Multi-agent swarms, RAG pipelines, LLM fine-tuning & tool interfaces",
+      description: "RAG pipelines, LLM agents, private deployments & tool interfaces",
       skills: [
-        "OpenClaw Framework", "Multi-Agent Swarms", "Tool-Using Autonomous Agents",
-        "Firecrawl Intelligence API", "FastMCP / Model Context Protocol", "RAG & VectorDB Pipelines",
-        "Ollama Local LLMs", "Sentence Transformers", "LangChain / LangGraph", "CamemBERT & Detectron2"
+        "RAG", "LLM Agents", "Tool-Using Agents", "Multi-Agent Orchestration",
+        "Prompt Engineering", "Fine-Tuning", "vLLM", "Ollama", "Open WebUI",
+        "LangChain", "LangGraph", "n8n", "Firecrawl", "Qdrant",
+        "Hugging Face Transformers", "PyTorch", "CamemBERT", "Detectron2"
       ]
     },
     {
@@ -41,28 +42,30 @@ export function TechStackSection() {
       accentColor: "cyan",
       description: "High-performance, responsive web applications & design systems",
       skills: [
-        "Next.js 16 (App Router)", "React 19", "TypeScript", "Tailwind CSS v4",
-        "Shadcn UI", "Redux Toolkit", "React Query", "Puter.js AI SDK", "HTML5 / CSS3 / ES6+"
+        "Next.js", "React", "TypeScript", "JavaScript", "Tailwind CSS",
+        "shadcn/ui", "Redux Toolkit", "React Query", "Puter.js", "HTML5 / CSS3"
       ]
     },
     {
       title: "Backend Services & APIs",
       icon: Server,
       accentColor: "emerald",
-      description: "Robust REST/GraphQL microservices, auth systems & async workflows",
+      description: "REST APIs, auth systems & async workflows",
       skills: [
-        "Node.js", "FastAPI (Python)", "Express.js", "NestJS", "Python 3.11+",
-        "JWT / OAuth 2.0 Security", "n8n Workflow Automation", "Encrypted Credentials (AES-256)", "Webhook Orchestration"
+        "Node.js", "Express.js", "NestJS", "FastAPI", "Python", "C#",
+        "ASP.NET MVC", "REST APIs", "JWT", "OAuth 2.0", "Webhook Integrations",
+        "n8n Workflow Automation"
       ]
     },
     {
       title: "Databases & DevOps Infrastructure",
       icon: Database,
       accentColor: "cyan",
-      description: "Scalable data persistence, multi-tenant caching & containerized CI/CD",
+      description: "Scalable data persistence & containerized delivery",
       skills: [
-        "PostgreSQL", "MySQL", "Qdrant VectorDB", "MongoDB", "Prisma ORM",
-        "Sequelize ORM", "Docker & Compose", "Turborepo Monorepos", "Vercel / NGINX / CI/CD"
+        "PostgreSQL", "Microsoft SQL Server", "MySQL", "MongoDB", "Qdrant",
+        "Prisma", "Sequelize", "Docker & Compose", "NGINX", "Vercel",
+        "CI/CD", "Git", "OpenTelemetry"
       ]
     }
   ];

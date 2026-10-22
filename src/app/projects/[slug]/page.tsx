@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${project.title} - Architecture-First Case Study`,
       description: project.overview,
       type: 'article',
-      siteName: 'Hicham Kraou | Systems Architect',
+      siteName: 'Hicham Kraou | Full-Stack & AI Developer',
     },
   };
 }

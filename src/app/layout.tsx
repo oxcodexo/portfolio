@@ -17,9 +17,9 @@ const monoFont = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hicham Kraou | Systems Architect & AI Engineering",
+  title: "Hicham Kraou | Full-Stack & AI Developer",
   description:
-    "Personal portfolio of Hicham Kraou - Systems Architect specializing in autonomous AI agent systems, MCP microservices, and multi-model LLM architectures.",
+    "Personal portfolio of Hicham Kraou - Full-Stack & AI Developer working on RAG, LLM agents, and private model deployments with Next.js, TypeScript, and Python.",
   icons: {
     icon: "/avatar.png",
     shortcut: "/avatar.png",

@@ -1,10 +1,11 @@
 import { describe, it, expect } from 'vitest';
 import { getProjectBySlug, getAllProjects, getEnterpriseSolutions } from '../registry';
+import { FLAGSHIP_PROJECTS, ENTERPRISE_SOLUTIONS } from '../data';
 
 describe('ProjectDataRegistry', () => {
   describe('getProjectBySlug', () => {
-    it('returns flagship project by slug for all valid flagship slugs', () => {
-      const slugs = ['openclaw', 'qrox', 'hrai', 'omnipilot-cx'];
+    it('returns flagship project by slug for every registered slug', () => {
+      const slugs = FLAGSHIP_PROJECTS.map((p) => p.slug);
       slugs.forEach((slug) => {
         const project = getProjectBySlug(slug);
         expect(project).not.toBeNull();
@@ -25,7 +26,8 @@ describe('ProjectDataRegistry', () => {
   describe('getAllProjects', () => {
     it('returns all flagship projects with valid structures', () => {
       const projects = getAllProjects();
-      expect(projects.length).toBe(4);
+      expect(projects.length).toBe(FLAGSHIP_PROJECTS.length);
+      expect(projects.length).toBeGreaterThan(0);
       projects.forEach((p) => {
         expect(p.id).toBeTruthy();
         expect(p.title).toBeTruthy();
@@ -37,12 +39,20 @@ describe('ProjectDataRegistry', () => {
         });
       });
     });
+
+    it('has unique slugs and ids across flagship projects', () => {
+      const slugs = FLAGSHIP_PROJECTS.map((p) => p.slug);
+      const ids = FLAGSHIP_PROJECTS.map((p) => p.id);
+      expect(new Set(slugs).size).toBe(slugs.length);
+      expect(new Set(ids).size).toBe(ids.length);
+    });
   });
 
   describe('getEnterpriseSolutions', () => {
     it('returns all enterprise solution cards with structured metrics and tags', () => {
       const solutions = getEnterpriseSolutions();
-      expect(solutions.length).toBe(4);
+      expect(solutions.length).toBe(ENTERPRISE_SOLUTIONS.length);
+      expect(solutions.length).toBeGreaterThan(0);
       solutions.forEach((s) => {
         expect(s.id).toBeTruthy();
         expect(s.title).toBeTruthy();
@@ -51,11 +61,16 @@ describe('ProjectDataRegistry', () => {
         expect(s.techTags.length).toBeGreaterThan(0);
       });
     });
+
+    it('has unique slugs across enterprise solutions', () => {
+      const slugs = ENTERPRISE_SOLUTIONS.map((s) => s.slug);
+      expect(new Set(slugs).size).toBe(slugs.length);
+    });
   });
 
   describe('Immutability', () => {
     it('returns frozen immutable objects', () => {
-      const project = getProjectBySlug('openclaw');
+      const project = getProjectBySlug(FLAGSHIP_PROJECTS[0].slug);
       expect(Object.isFrozen(project)).toBe(true);
     });
   });

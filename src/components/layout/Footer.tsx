@@ -9,7 +9,7 @@ export function Footer() {
         <div className="flex flex-col gap-2 text-center md:text-left">
           <div className="flex items-center justify-center md:justify-start gap-2 text-zinc-100 font-bold tracking-wider">
             <Cpu className="h-4 w-4 text-emerald-400" />
-            <span>HICHAM KRAOU // SYSTEMS ARCHITECT</span>
+            <span>HICHAM KRAOU // FULL-STACK &amp; AI DEVELOPER</span>
           </div>
           <p className="text-zinc-400 text-[11px] flex items-center justify-center md:justify-start gap-1.5 pt-0.5">
             <MapPin className="h-3 w-3 text-emerald-400" />

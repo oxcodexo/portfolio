@@ -19,7 +19,7 @@ export function AboutSection() {
       <div className="flex flex-col gap-2">
         <div className="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-widest">
           <User className="h-4 w-4 text-emerald-400" />
-          <span>SYSTEMS ARCHITECT &bull; PERSONAL PROFILE</span>
+          <span>PROFILE &bull; FULL-STACK &amp; AI DEVELOPER</span>
         </div>
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white font-mono">
           Engineering Philosophy &amp; Bio
@@ -89,13 +89,13 @@ export function AboutSection() {
 
             <div className="space-y-4 text-sm text-zinc-300 font-sans leading-relaxed">
               <p>
-                Full Stack &amp; AI Systems Architect with a proven track record delivering production-grade SaaS platforms, autonomous multi-agent orchestration engines, and high-throughput microservices.
+                Full-Stack &amp; AI Developer with 3+ years building web applications and AI-enabled systems end to end: Next.js and TypeScript on the front, Node and Python services on PostgreSQL behind it.
               </p>
               <p>
-                Specialized in architecting self-hosted agent gateways (<strong className="text-emerald-300 font-mono">OpenClaw</strong>), fine-tuned domain LLMs, natural-language-to-SQL assistants with semantic tool contracts, and production database integrations with Firecrawl and PostgreSQL.
+                Recent work is AI-heavy — a private on-premises RAG platform for document summarization and policy review, a French-language natural-language-to-SQL assistant delivered as an MCP skill, and an air-gapped GPU inference server running vLLM.
               </p>
               <p>
-                Passionate about bridging the gap between cutting-edge multi-model AI research (OpenAI, Claude, Gemini, DeepSeek) and deterministic, enterprise-grade software architectures.
+                Also ships full products: Fleetora, a hosted multilingual car-rental marketplace, and Qrox, a multi-model AI chat application. Works in Docker-based delivery, from schema design through to deployment.
               </p>
             </div>
           </div>
@@ -126,8 +126,8 @@ export function AboutSection() {
               <Cpu className="h-6 w-6" />
             </div>
             <div>
-              <div className="text-2xl font-bold font-mono text-white">OpenClaw Swarms</div>
-              <p className="text-xs font-mono text-zinc-400">Autonomous multi-agent orchestration &amp; AI web intelligence</p>
+              <div className="text-2xl font-bold font-mono text-white">HRAI</div>
+              <p className="text-xs font-mono text-zinc-400">Natural-language SQL over a personnel database, in French</p>
             </div>
           </motion.div>
 
@@ -140,8 +140,8 @@ export function AboutSection() {
               <Sparkles className="h-6 w-6" />
             </div>
             <div>
-              <div className="text-2xl font-bold font-mono text-white">500+ AI Models</div>
-              <p className="text-xs font-mono text-zinc-400">Frontier multi-model chat platform (<strong className="text-cyan-300">Qrox</strong>)</p>
+              <div className="text-2xl font-bold font-mono text-white">Fleetora — Live</div>
+              <p className="text-xs font-mono text-zinc-400">Hosted multilingual car-rental marketplace (<strong className="text-cyan-300">FR/AR/EN</strong>)</p>
             </div>
           </motion.div>
 
@@ -154,8 +154,8 @@ export function AboutSection() {
               <Code2 className="h-6 w-6" />
             </div>
             <div>
-              <div className="text-2xl font-bold font-mono text-white">Sub-50ms Cache</div>
-              <p className="text-xs font-mono text-zinc-400">High-concurrency multi-tenant SaaS (<strong className="text-emerald-300">OmniPilot-CX</strong>)</p>
+              <div className="text-2xl font-bold font-mono text-white">2× H200</div>
+              <p className="text-xs font-mono text-zinc-400">Air-gapped vLLM inference &amp; fine-tuning server</p>
             </div>
           </motion.div>
         </div>

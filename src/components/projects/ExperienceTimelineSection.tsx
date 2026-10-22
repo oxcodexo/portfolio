@@ -9,82 +9,123 @@ export function ExperienceTimelineSection() {
 
   const experiences = [
     {
-      title: "OpenClaw AI Agent Platform",
-      subtitle: "Self-Hosted AI Gateway & Real-Estate Intelligence Swarm",
-      date: "May 2026",
-      type: "Architectural Showcase",
-      caseStudyRoute: "/projects/openclaw",
+      title: "GPU Inference Deployment",
+      subtitle: "Air-Gapped Inference & Fine-Tuning Server",
+      date: "Sep 2026 – Present",
+      type: "AI Infrastructure",
+      caseStudyRoute: "/projects/gpu-inference",
       icon: Cpu,
       accentColor: "emerald",
       highlights: [
-        "Architected a two-tier agent system on OpenClaw (MIT, 250K+ stars) with an Orchestrator routing requests to dedicated subagents.",
-        "Built an autonomous RE-Scraper subagent extracting structured rental unit data using Firecrawl AI reasoning into a 33-column MySQL schema.",
-        "Discovered hidden JSON APIs and extracted 262 rental units across 20 floors with 100% database integrity and checkpoint/resume capabilities.",
-        "Configured OpenRouter LLM routing, Tailscale-aware gateway networking, session memory, and OpenTelemetry diagnostics."
+        "Prepared a fresh Ubuntu server with two H200 GPUs for air-gapped inference, staging packages and container images while online before offline operation.",
+        "Run Docker services for vLLM, Speaches/Whisper, n8n, PostgreSQL, Qdrant, Grafana, Prometheus, Unsloth Studio, and Jupyter Notebook.",
+        "Configured the stack to support domain-specific fine-tuning alongside inference, with Grafana and Prometheus covering monitoring."
       ],
-      tags: ["OpenClaw", "Docker", "Firecrawl API", "MySQL", "OpenRouter", "Python", "Linux"]
+      tags: ["Ubuntu", "Docker", "vLLM", "PostgreSQL", "Qdrant", "Grafana", "Prometheus", "Jupyter"]
     },
     {
-      title: "Qrox — Multi-Model AI Chat Platform",
-      subtitle: "Frontier AI Chat UI & User-Pays Architecture",
+      title: "Fleetora — Car-Rental Platform",
+      subtitle: "Agency & Renter Workflows for the Moroccan Market",
+      date: "May – Aug 2026",
+      type: "Live Platform",
+      link: "https://fleetora.vercel.app",
+      caseStudyRoute: "/projects/fleetora",
+      icon: Zap,
+      accentColor: "cyan",
+      highlights: [
+        "Built and hosted a car-rental platform with agency workflows covering fleet, pricing, availability, reservations, and contracts.",
+        "Added a renter-facing search and booking flow with French, Arabic, and English support.",
+        "Shipped on Next.js and TypeScript with a PostgreSQL data model managed through Prisma, deployed in Docker."
+      ],
+      tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Docker", "Vercel"]
+    },
+    {
+      title: "HRAI — Natural-Language SQL Assistant",
+      subtitle: "French-Language Queries over a Personnel Database",
+      date: "May – Jun 2026",
+      type: "Internal AI Assistant",
+      caseStudyRoute: "/projects/hrai",
+      icon: ShieldCheck,
+      accentColor: "emerald",
+      highlights: [
+        "Built a French-language assistant that turns natural-language requests into schema-aware SQL Server queries for non-technical staff.",
+        "Delivered it as an isolated MCP skill with schema access, so the agent plans queries from verified joins and generated filters instead of free-form SQL.",
+        "Added query validation and correction guidance, with result sets under 20 rows shown in chat and larger ones exported to Excel."
+      ],
+      tags: ["TypeScript", "Python", "FastMCP", "FastAPI", "Ollama", "Microsoft SQL Server", "Docker"]
+    },
+    {
+      title: "Qrox — Multi-Model AI Chat",
+      subtitle: "Streaming Chat, Model Discovery & Image Handling",
       date: "Feb 2026",
-      type: "Live Production Platform",
+      type: "Live Project",
       link: "https://qrox.vercel.app",
       caseStudyRoute: "/projects/qrox",
       icon: Zap,
       accentColor: "cyan",
       highlights: [
-        "Engineered a Perplexity-inspired chat UI enabling seamless interaction with 500+ frontier AI models (OpenAI, Claude, Gemini, Mistral) with zero API key friction.",
-        "Architected dual-authentication system (JWT + Puter SDK guest mode) achieving <10s session initialization for 99% of users.",
-        "Implemented real-time streaming chat with markdown rendering, vision support, and native AI image generation via function calling.",
-        "Deployed on Vercel with PostgreSQL backend achieving <200ms database latency and 99.9% data integrity across 1,000+ test sessions."
+        "Built and hosted a multi-model AI chat application with streaming conversations and model discovery.",
+        "Added conversation persistence, image uploads, and AI image generation through function calling.",
+        "Delivered on Next.js and TypeScript with PostgreSQL and Prisma behind the interface."
       ],
-      tags: ["Next.js 16", "Puter.js AI API", "PostgreSQL", "Prisma", "TailwindCSS", "shadcn/ui"]
+      tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Puter.js", "Tailwind CSS", "shadcn/ui"]
     },
     {
-      title: "HRAI — Autonomous AI HR Assistant",
-      subtitle: "Confidential Enterprise Client, Rabat",
-      date: "Jan – Feb 2026",
-      type: "Enterprise AI Microservices",
-      caseStudyRoute: "/projects/hrai",
-      icon: ShieldCheck,
+      title: "OmniPilot-CX — E-Commerce Sales Assistant",
+      subtitle: "Multilingual Messenger Workflows for Merchants",
+      date: "Nov 2025 – Jan 2026",
+      type: "AI Automation",
+      caseStudyRoute: "/projects/omnipilot-cx",
+      icon: Server,
       accentColor: "emerald",
       highlights: [
-        "Architected & led a v3.0 → v4.0 transformation enabling non-technical staff to query confidential personnel databases via natural language (French).",
-        "Designed the Semantic Tool Contract pattern where MCP tools return explicit states and conversation guidance, turning tools into dialogue partners.",
-        "Built a LEGO Assembly pattern for Text-to-SQL paired with a Rust-inspired self-healing SQL validator and sentence transformer entity matching.",
-        "Refactored monolithic deployment to 8 isolated MCP microservice containers with automated CI/CD schema validation."
+        "Built multilingual product-management and Messenger sales-assistant workflows on a PostgreSQL-backed product catalog.",
+        "Wired conversation handling and order capture through Google Gemini and the Facebook Graph API, with n8n orchestrating the workflow.",
+        "Handled Darija, French, and English in the same conversation flow."
       ],
-      tags: ["Python", "TypeScript", "FastMCP", "FastAPI", "Ollama", "Sentence Transformers", "Docker"]
+      tags: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "n8n", "Google Gemini", "Docker"]
     },
     {
-      title: "OmniPilot-CX — AI Sales Agent for E-Commerce",
-      subtitle: "Multi-Tenant Vertical SaaS Platform",
-      date: "Jan 2026",
-      type: "Production-Ready SaaS",
-      caseStudyRoute: "/projects/omnipilot-cx",
+      title: "MCP Launch — Self-Hosted MCP Gateway",
+      subtitle: "Isolated Tool Servers Behind One Endpoint",
+      date: "Apr 2026",
+      type: "Developer Infrastructure",
+      caseStudyRoute: "/projects/mcp-launch",
       icon: Server,
       accentColor: "cyan",
       highlights: [
-        "Built multi-tenant architecture supporting 1,000+ concurrent stores with sub-50ms product query responses from PostgreSQL cache.",
-        "Integrated Google Gemini + n8n workflows for multi-language conversation handling (Darija/French/English auto-detection) and order capture.",
-        "Implemented platform-owned Facebook App with one-click OAuth onboarding and encrypted credential storage (AES-256-GCM)."
+        "Built a Docker-based gateway exposing isolated MCP servers to AI agents through a Caddy reverse proxy and an HTTPS tunnel.",
+        "Added path-based routing and bearer-token validation so each request reaches only its intended server."
       ],
-      tags: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "n8n", "Google Gemini API", "Docker"]
+      tags: ["Docker", "Caddy", "ngrok", "MCP"]
     },
     {
-      title: "Full-Stack Healthcare & Enterprise LLM Platforms",
-      subtitle: "Medical Scheduling SaaS & Offline Intranet AI Systems",
-      date: "2024 – 2025",
-      type: "Enterprise Deployments",
-      icon: Database,
+      title: "OpenClaw Real-Estate Research Agent",
+      subtitle: "Configured Agent Harness with Firecrawl Extraction",
+      date: "May 2026",
+      type: "Agent Configuration",
+      caseStudyRoute: "/projects/openclaw",
+      icon: Cpu,
       accentColor: "emerald",
       highlights: [
-        "Architected Turborepo monorepo medical platform connecting patients with healthcare providers, reducing unauthorized access attempts to zero.",
-        "Deployed secure offline enterprise LLMs (Qwen, DeVstral) via Ollama & Open WebUI for confidential document analysis and policy compliance.",
-        "Fine-tuned CamemBERT ML models for French narrative employee evaluations achieving 92% correlation with human assessments."
+        "Configured an OpenClaw agent with Firecrawl to collect structured real-estate data from property websites.",
+        "Set up storage of the scraped property records in MySQL, with model routing and OpenTelemetry diagnostics configured around the run."
       ],
-      tags: ["React", "Express.js", "Ollama", "Qdrant VectorDB", "CamemBERT", "Turborepo", "MySQL"]
+      tags: ["OpenClaw", "Firecrawl", "MySQL", "OpenRouter", "Python", "OpenTelemetry"]
+    },
+    {
+      title: "Private On-Premises LLM & RAG Platform",
+      subtitle: "Offline Document, Policy & Legal Workflows",
+      date: "2025",
+      type: "Enterprise Deployment",
+      icon: Database,
+      accentColor: "cyan",
+      highlights: [
+        "Deployed local-model RAG workflows for document summarization, policy review, and legal assistance in an offline environment.",
+        "Configured task-specific model settings across Ollama, Open WebUI, n8n, and Qdrant, all running in Docker.",
+        "Fine-tuned CamemBERT separately for French narrative employee evaluations, served through FastAPI and React."
+      ],
+      tags: ["Ollama", "Open WebUI", "n8n", "Qdrant", "CamemBERT", "FastAPI", "Docker"]
     }
   ];
 

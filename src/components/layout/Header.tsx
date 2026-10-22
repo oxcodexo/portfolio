@@ -28,7 +28,7 @@ export function Header() {
               <span className="text-[10px] text-emerald-400 font-semibold">[HK]</span>
             </span>
             <span className="text-[10px] tracking-widest text-zinc-400 font-mono uppercase">
-              Systems Architect
+              Full-Stack &amp; AI Developer
             </span>
           </div>
         </Link>

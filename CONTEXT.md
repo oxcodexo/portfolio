@@ -4,9 +4,9 @@ Domain model and ubiquitous language for the personal portfolio of Hicham Kraou.
 
 ## Language
 
-**Systems Architect (AI-First Focus)**:
-The core professional positioning combining deep full-stack SaaS engineering expertise with specialized autonomous AI agent systems, MCP microservices, and multi-model LLM architectures.
-_Avoid_: Full-Stack Developer, Frontend Engineer, AI Prompt Engineer
+**Full-Stack & AI Developer**:
+The core professional positioning combining full-stack SaaS engineering with applied AI work — RAG systems, LLM agent workflows, private model deployments, and MCP tooling. This is the canonical public title and must match the master resume headline.
+_Avoid_: Systems Architect, AI Prompt Engineer, ML Researcher
 
 **Production Stack**:
 The technical foundation of the portfolio application, built with Next.js 16 (App Router, React 19, TypeScript), Tailwind CSS v4, and Shadcn UI to mirror real-world client deliverables.
@@ -29,7 +29,7 @@ The visual design system featuring deep zinc backgrounds, glassmorphic card surf
 _Avoid_: Generic light theme, plain white backgrounds, corporate blue palettes
 
 **Flagship Case Study**:
-Deep-dive architectural showcase reserved for core AI systems (OpenClaw, Qrox, HRAI, OmniPilot-CX) featuring interactive diagrams, metric counters, and proprietary design patterns.
+Deep-dive architectural showcase for the projects listed in `src/lib/projects/data.ts` (HRAI, Fleetora, Qrox, OmniPilot-CX, OpenClaw agent, MCP Launch, GPU Inference), featuring interactive diagrams, metric counters, and design notes.
 _Avoid_: Simple portfolio item, basic project link
 
 **Enterprise Solution Card**:

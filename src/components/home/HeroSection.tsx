@@ -63,10 +63,10 @@ export function HeroSection() {
           Hi, I&apos;m <span className="bg-linear-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(16,185,129,0.2)]">Hicham Kraou</span>
         </motion.h1>
         <motion.p variants={itemVariants} className="text-xl sm:text-2xl text-zinc-200 font-mono font-medium max-w-3xl mx-auto leading-relaxed">
-          Full Stack &amp; AI Systems Architect specializing in autonomous agent swarms, multi-model LLM platforms, and enterprise SaaS systems.
+          Full-Stack &amp; AI Developer building RAG systems, LLM agent workflows, and private model deployments.
         </motion.p>
         <motion.p variants={itemVariants} className="text-sm sm:text-base text-zinc-400 font-sans max-w-2xl mx-auto leading-relaxed">
-          Designing scalable multi-agent gateways (OpenClaw), natural-language-to-SQL microservices (MCP standard), and production-grade full-stack applications with deterministic precision.
+          Next.js and TypeScript on the front, Node and Python services on PostgreSQL behind it — shipped end to end, from schema design to Docker-based delivery.
         </motion.p>
       </motion.div>
 
@@ -110,22 +110,22 @@ export function HeroSection() {
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between">
               <span className="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-semibold">
-                AGENT FRAMEWORK
+                AI SYSTEM
               </span>
               <div className="h-8 w-8 rounded-lg border border-zinc-800 bg-zinc-900/80 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/40 transition-colors">
                 <Cpu className="h-4 w-4" />
               </div>
             </div>
-            <div className="text-xl font-bold font-mono text-white tracking-tight">OpenClaw Engine</div>
+            <div className="text-xl font-bold font-mono text-white tracking-tight">HRAI</div>
             <p className="text-xs text-zinc-400 font-mono leading-relaxed">
-              Intent routing, state machines, and autonomous multi-agent swarms.
+              Natural-language SQL over a personnel database, in French.
             </p>
           </div>
           <Link
-            href="/projects/openclaw"
+            href="/projects/hrai"
             className="flex items-center gap-1 text-[11px] font-mono text-zinc-400 group-hover:text-emerald-400 transition-colors pt-2 border-t border-zinc-800/60"
           >
-            <span>Inspect OpenClaw Case Study</span>
+            <span>Inspect HRAI Case Study</span>
             <ChevronRight className="h-3.5 w-3.5" />
           </Link>
         </motion.div>
@@ -140,16 +140,16 @@ export function HeroSection() {
                 <Server className="h-4 w-4" />
               </div>
             </div>
-            <div className="text-xl font-bold font-mono text-white tracking-tight">MCP Standard</div>
+            <div className="text-xl font-bold font-mono text-white tracking-tight">MCP Launch</div>
             <p className="text-xs text-zinc-400 font-mono leading-relaxed">
-              Model Context Protocol servers providing modular tools &amp; live context.
+              Isolated MCP servers exposed to agents behind one gateway.
             </p>
           </div>
           <Link
-            href="/projects/qrox"
+            href="/projects/mcp-launch"
             className="flex items-center gap-1 text-[11px] font-mono text-zinc-400 group-hover:text-cyan-400 transition-colors pt-2 border-t border-zinc-800/60"
           >
-            <span>Inspect Qrox Gateway</span>
+            <span>Inspect MCP Launch</span>
             <ChevronRight className="h-3.5 w-3.5" />
           </Link>
         </motion.div>
@@ -158,22 +158,22 @@ export function HeroSection() {
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between">
               <span className="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-semibold">
-                PERFORMANCE
+                INFRASTRUCTURE
               </span>
               <div className="h-8 w-8 rounded-lg border border-zinc-800 bg-zinc-900/80 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/40 transition-colors">
                 <Zap className="h-4 w-4" />
               </div>
             </div>
-            <div className="text-xl font-bold font-mono text-white tracking-tight">Sub-100ms</div>
+            <div className="text-xl font-bold font-mono text-white tracking-tight">2× H200</div>
             <p className="text-xs text-zinc-400 font-mono leading-relaxed">
-              Optimized LLM stream latency &amp; high-throughput parallel execution.
+              Air-gapped inference stack served with vLLM.
             </p>
           </div>
           <Link
-            href="/projects/omnipilot-cx"
+            href="/projects/gpu-inference"
             className="flex items-center gap-1 text-[11px] font-mono text-zinc-400 group-hover:text-emerald-400 transition-colors pt-2 border-t border-zinc-800/60"
           >
-            <span>Inspect OmniPilot-CX</span>
+            <span>Inspect GPU Inference</span>
             <ChevronRight className="h-3.5 w-3.5" />
           </Link>
         </motion.div>

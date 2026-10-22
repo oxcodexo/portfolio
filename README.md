@@ -1,6 +1,6 @@
-# Portfolio of Hicham Kraou — Systems Architect & AI/Full-Stack Developer
+# Portfolio of Hicham Kraou — Full-Stack & AI Developer
 
-A high-performance, production-grade personal developer portfolio engineered to showcase deep full-stack SaaS capabilities, autonomous AI agent orchestration systems, MCP microservices, and multi-model LLM architectures.
+A high-performance personal developer portfolio showcasing full-stack product work alongside applied AI systems: RAG pipelines, LLM agent workflows, MCP tooling, and private model deployments.
 
 Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS v4**, and **Shadcn UI**, adhering to a **Cyber-Architect Aesthetic** with dark zinc tones, glassmorphic card surfaces, and neon emerald/cyan accents.
 
@@ -9,10 +9,23 @@ Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind
 ## 🌟 Core Highlights & Architectural Features
 
 - 👤 **Human-Centric Personal Brand**: Clean, professional personal portfolio layout presenting Hicham Kraou (based in Rabat, Morocco) front and center with career bio, education, and credentials.
-- 💼 **Featured Career History**: Consolidated timeline displaying real-world production deployments (OpenClaw, Qrox live platform, HRAI, OmniPilot-CX, and Healthcare SaaS) with direct links to dedicated architectural case studies (`/projects/[slug]`).
+- 💼 **Featured Career History**: Consolidated timeline of selected projects (GPU Inference Deployment, Fleetora, HRAI, Qrox, OmniPilot-CX, MCP Launch, OpenClaw agent) with direct links to dedicated case studies (`/projects/[slug]`).
 - 🛠️ **Categorized Tech Stack Matrix**: Structured grid organizing technical capabilities across AI & Autonomous Agents, Full-Stack Frontend, Backend Microservices, and Databases/DevOps.
 - ✉️ **Direct Contact & Connect**: Clean, personal connection hub providing direct links to Email (`hichamkraou1@gmail.com`), LinkedIn ([`oxcodexo`](https://linkedin.com/in/oxcodexo)), and GitHub ([`oxcodexo`](https://github.com/oxcodexo)).
 - 📐 **Hybrid Multi-Page Routing**: Independent Next.js routes ensuring canonical URLs and custom OpenGraph metadata for platform sharing, paired with smooth client transitions.
+
+---
+
+## 📌 Content sourcing rule
+
+All published project copy, metrics, and skill lists trace back to the master resume
+(`resume.yaml`) and are held to strict fact discipline:
+
+- No unverified quantitative claims are published. Numbers marked unverified, target, or
+  PRD-only in the master are omitted rather than shown as achieved results.
+- Confidential-organization work uses generic project names only; the employer is never named.
+- Project descriptions must not imply authorship of third-party frameworks (for example,
+  OpenClaw is configured and used, not authored).
 
 ---
 
