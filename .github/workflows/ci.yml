@@ -14,8 +14,8 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
+        # Version comes from package.json#packageManager — do not set `version` here,
+        # a conflicting value makes this action fail.
 
       - name: Use Node.js
         uses: actions/setup-node@v4
