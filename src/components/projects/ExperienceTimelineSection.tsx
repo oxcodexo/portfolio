@@ -114,7 +114,7 @@ export function ExperienceTimelineSection() {
       tags: ["OpenClaw", "Firecrawl", "MySQL", "OpenRouter", "Python", "OpenTelemetry"]
     },
     {
-      title: "Private On-Premises LLM & RAG Platform",
+      title: "On-Premises RAG Platform",
       subtitle: "Offline Document, Policy & Legal Workflows",
       date: "2025",
       type: "Enterprise Deployment",
