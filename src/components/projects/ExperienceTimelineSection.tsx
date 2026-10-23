@@ -9,7 +9,7 @@ export function ExperienceTimelineSection() {
 
   const experiences = [
     {
-      title: "GPU Inference Deployment",
+      title: "Air-Gapped Inference Cluster",
       subtitle: "Air-Gapped Inference & Fine-Tuning Server",
       date: "Sep 2026 – Present",
       type: "AI Infrastructure",

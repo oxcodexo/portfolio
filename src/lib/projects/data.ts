@@ -121,11 +121,12 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
     title: 'OpenClaw Real-Estate Research Agent',
     tagline: 'Configured Agent Harness with Firecrawl Extraction into MySQL',
     overview:
-      'An OpenClaw agent configured to research real-estate listings: Firecrawl is attached as a tool for structured collection from property websites, and the extracted records are written into MySQL. This is a configured agent deployment on top of the open-source OpenClaw harness — not the framework itself.',
+      'An OpenClaw agent configured to research real-estate listings: Firecrawl is attached as a tool for structured collection from property websites, and the extracted records are written into MySQL. The collection covers 262 units across 20 floors and four typologies. This is a configured agent deployment on top of the open-source OpenClaw harness — not the framework itself.',
     metrics: [
       { label: 'Role', value: 'Configured agent', description: 'Built on the OpenClaw harness' },
       { label: 'Extraction', value: 'Firecrawl', description: 'Tool attached to the agent' },
-      { label: 'Storage', value: 'MySQL', description: 'Structured property records' }
+      { label: 'Storage', value: 'MySQL', description: 'Structured property records' },
+      { label: 'Coverage', value: '262 units', description: 'Across 20 floors and four typologies' }
     ],
     techTags: ['OpenClaw', 'Firecrawl', 'MySQL', 'Docker', 'OpenRouter', 'Python', 'OpenTelemetry'],
     systemFlows: [
@@ -170,7 +171,7 @@ export const FLAGSHIP_PROJECTS: FlagshipProject[] = [
   {
     id: 'gpu-inference',
     slug: 'gpu-inference',
-    title: 'GPU Inference Deployment',
+    title: 'Air-Gapped Inference Cluster',
     tagline: 'Air-Gapped Inference and Fine-Tuning Server',
     overview:
       'Preparation of a fresh Ubuntu server with two H200 GPUs for air-gapped inference: required packages and container images are staged while the machine is online, then the stack is operated offline. Docker services cover inference, workflow automation, storage, monitoring, and fine-tuning.',
@@ -203,7 +204,7 @@ export const ENTERPRISE_SOLUTIONS: EnterpriseSolution[] = [
   {
     id: 'onprem-rag',
     slug: 'onprem-rag',
-    title: 'Private On-Premises LLM and RAG Platform',
+    title: 'On-Premises RAG Platform',
     description:
       'Local-model RAG workflows for document summarization, policy review, and legal assistance, running offline with task-specific model configuration.',
     metrics: [
@@ -215,7 +216,7 @@ export const ENTERPRISE_SOLUTIONS: EnterpriseSolution[] = [
   {
     id: 'hr-evaluation',
     slug: 'hr-evaluation',
-    title: 'French Employee Evaluation Scoring',
+    title: 'French-Language Evaluation Scoring',
     description:
       'CamemBERT fine-tuned on French narrative employee evaluations, serving an internal scoring workflow through FastAPI and a React interface.',
     metrics: [
@@ -227,7 +228,7 @@ export const ENTERPRISE_SOLUTIONS: EnterpriseSolution[] = [
   {
     id: 'fuel-station',
     slug: 'fuel-station',
-    title: 'Fuel Station Management and Plate Recognition',
+    title: 'Retail Operations & Plate Recognition',
     description:
       'Fuel-station operations software with a Node.js and React backend, a Flutter employee application, and Detectron2-based Moroccan license-plate recognition served through FastAPI.',
     metrics: [
@@ -239,7 +240,7 @@ export const ENTERPRISE_SOLUTIONS: EnterpriseSolution[] = [
   {
     id: 'internal-hr',
     slug: 'internal-hr',
-    title: 'Internal HR Applications',
+    title: 'Enterprise Workflow Applications',
     description:
       'Employee records, promotion, and transfer workflows built with ASP.NET MVC and Express.js services over SQL Server.',
     metrics: [

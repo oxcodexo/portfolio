@@ -173,7 +173,7 @@ export function HeroSection() {
             href="/projects/gpu-inference"
             className="flex items-center gap-1 text-[11px] font-mono text-zinc-400 group-hover:text-emerald-400 transition-colors pt-2 border-t border-zinc-800/60"
           >
-            <span>Inspect GPU Inference</span>
+            <span>Inspect Inference Cluster</span>
             <ChevronRight className="h-3.5 w-3.5" />
           </Link>
         </motion.div>

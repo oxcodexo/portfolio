@@ -9,7 +9,7 @@ Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind
 ## 🌟 Core Highlights & Architectural Features
 
 - 👤 **Human-Centric Personal Brand**: Clean, professional personal portfolio layout presenting Hicham Kraou (based in Rabat, Morocco) front and center with career bio, education, and credentials.
-- 💼 **Featured Career History**: Consolidated timeline of selected projects (GPU Inference Deployment, Fleetora, HRAI, Qrox, OmniPilot-CX, MCP Launch, OpenClaw agent) with direct links to dedicated case studies (`/projects/[slug]`).
+- 💼 **Featured Career History**: Consolidated timeline of selected projects (Air-Gapped Inference Cluster, Fleetora, HRAI, Qrox, OmniPilot-CX, MCP Launch, OpenClaw agent) with direct links to dedicated case studies (`/projects/[slug]`).
 - 🛠️ **Categorized Tech Stack Matrix**: Structured grid organizing technical capabilities across AI & Autonomous Agents, Full-Stack Frontend, Backend Microservices, and Databases/DevOps.
 - ✉️ **Direct Contact & Connect**: Clean, personal connection hub providing direct links to Email (`hichamkraou1@gmail.com`), LinkedIn ([`oxcodexo`](https://linkedin.com/in/oxcodexo)), and GitHub ([`oxcodexo`](https://github.com/oxcodexo)).
 - 📐 **Hybrid Multi-Page Routing**: Independent Next.js routes ensuring canonical URLs and custom OpenGraph metadata for platform sharing, paired with smooth client transitions.
