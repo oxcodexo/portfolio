@@ -29,7 +29,7 @@ The visual design system featuring deep zinc backgrounds, glassmorphic card surf
 _Avoid_: Generic light theme, plain white backgrounds, corporate blue palettes
 
 **Flagship Case Study**:
-Deep-dive architectural showcase for the projects listed in `src/lib/projects/data.ts` (HRAI, Fleetora, Qrox, OmniPilot-CX, OpenClaw agent, MCP Launch, GPU Inference), featuring interactive diagrams, metric counters, and design notes.
+Deep-dive architectural showcase for the projects listed in `src/lib/projects/data.ts` (HRAI, Fleetora, Qrox, OmniPilot-CX, OpenClaw agent, MCP Launch, Air-Gapped Inference Cluster), featuring interactive diagrams, metric counters, and design notes.
 _Avoid_: Simple portfolio item, basic project link
 
 **Enterprise Solution Card**:
