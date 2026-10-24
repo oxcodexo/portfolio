@@ -68,6 +68,52 @@ describe('ProjectDataRegistry', () => {
     });
   });
 
+  describe('Project titles — consistency and completeness', () => {
+    it('all flagship project titles are consistent (match canonical data)', () => {
+      const canonicalTitles = new Map(FLAGSHIP_PROJECTS.map((p) => [p.id, p.title]));
+
+      // These titles must match exactly across all references.
+      // If a title changes in data.ts, it must be updated everywhere it appears
+      // (e.g., ExperienceTimelineSection.tsx, README.md, CONTEXT.md).
+      const expectedTitles = {
+        'hrai': 'HRAI',
+        'fleetora': 'Fleetora',
+        'qrox': 'Qrox',
+        'omnipilot-cx': 'OmniPilot-CX',
+        'openclaw': 'OpenClaw Real-Estate Research Agent',
+        'mcp-launch': 'MCP Launch',
+        'gpu-inference': 'Air-Gapped Inference Cluster',
+      };
+
+      for (const [id, expectedTitle] of Object.entries(expectedTitles)) {
+        const actualTitle = canonicalTitles.get(id);
+        expect(actualTitle).toBe(
+          expectedTitle,
+          `Title mismatch for ${id}: expected "${expectedTitle}", got "${actualTitle}"`
+        );
+      }
+    });
+
+    it('all enterprise solution titles are consistent (match canonical data)', () => {
+      const canonicalTitles = new Map(ENTERPRISE_SOLUTIONS.map((s) => [s.id, s.title]));
+
+      const expectedTitles = {
+        'onprem-rag': 'On-Premises RAG Platform',
+        'hr-evaluation': 'French-Language Evaluation Scoring',
+        'fuel-station': 'Retail Operations & Plate Recognition',
+        'internal-hr': 'Enterprise Workflow Applications',
+      };
+
+      for (const [id, expectedTitle] of Object.entries(expectedTitles)) {
+        const actualTitle = canonicalTitles.get(id);
+        expect(actualTitle).toBe(
+          expectedTitle,
+          `Title mismatch for ${id}: expected "${expectedTitle}", got "${actualTitle}"`
+        );
+      }
+    });
+  });
+
   describe('Immutability', () => {
     it('returns frozen immutable objects', () => {
       const project = getProjectBySlug(FLAGSHIP_PROJECTS[0].slug);
