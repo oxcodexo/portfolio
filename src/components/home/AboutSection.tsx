@@ -89,7 +89,7 @@ export function AboutSection() {
 
             <div className="space-y-4 text-sm text-zinc-300 font-sans leading-relaxed">
               <p>
-                Full-Stack &amp; AI Developer with 3+ years building web applications and AI-enabled systems end to end: Next.js and TypeScript on the front, Node and Python services on PostgreSQL behind it.
+                Full-Stack &amp; AI Developer with 3+ years specializing in AI-enabled systems and LLM architectures, built on 6+ years of full-stack web development foundation. Tech: Next.js and TypeScript on the front, Node and Python services on PostgreSQL behind it.
               </p>
               <p>
                 Recent work is AI-heavy — a private on-premises RAG platform for document summarization and policy review, a French-language natural-language-to-SQL assistant delivered as an MCP skill, and an air-gapped GPU inference server running vLLM.
